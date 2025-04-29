@@ -1,0 +1,196 @@
+/* Estilo claro (padrão) */
+body {
+  background-color: #f0f0f0;
+  color: black;
+  /*background-image: url('https://static.vecteezy.com/system/resources/previews/022/514/324/non_2x/white-gradient-abstract-curve-pattern-free-photo.jpeg');*/
+}
+
+header {
+  background-color: black;
+  color: white;
+}
+
+nav a {
+  color: white;
+}
+
+h1 {
+  color: black;
+  background-color: whitesmoke;
+  border-color: black;
+}
+
+p {
+  color: black;
+}
+
+.caixa {
+  background-color: white;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+button {
+  background-color: black;
+  color: white;
+}
+
+button:hover {
+  background-color: dimgray;
+}
+
+.sobre {
+  background-color: white;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.sobre h2 {
+  color: black;
+}
+
+.projetos h2 {
+  color: black;
+}
+
+.projeto {
+  background-color: white;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.projeto h3 {
+  color: black;
+}
+
+.evento::before {
+  background-color: black;
+}
+
+.evento .ano {
+  color: black;
+}
+
+.habilidade {
+  background-color: lightgray;
+  color: #333;
+}
+
+.contato {
+  background-color: white;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.contato h2 {
+  color: black;
+}
+
+.contato label {
+  color: #333;
+}
+
+.contato input,
+.contato textarea {
+  border-color: #ccc;
+}
+
+.contato button {
+  background-color: black;
+  color: white;
+}
+
+footer {
+  background-color: black;
+  color: white;
+}
+
+footer p {
+  color: white;
+}
+
+/* Estilo escuro (modo noturno) */
+@media (prefers-color-scheme: dark) {
+  body {
+    background-color: #111;
+    color: white;
+  }
+  
+  header {
+    background-color: black;
+  }
+  
+  h1 {
+    color: white;
+    background-color: #111;
+    border-color: lightgray;
+  }
+  
+  p {
+    color: white;
+  }
+  
+  .caixa {
+    background-color: black;
+    box-shadow: 0 4px 10px rgba(255, 255, 255, 0.1);
+  }
+  
+  button {
+    background-color: white;
+    color: black;
+  }
+  
+  button:hover {
+    background-color: dimgray;
+  }
+  
+  .sobre {
+    background-color: black;
+    box-shadow: 0 4px 10px rgba(255, 255, 255, 0.1);
+  }
+  
+  .sobre h2 {
+    color: white;
+  }
+  
+  .projetos h2 {
+    color: white;
+  }
+  
+  .projeto {
+    background-color: black;
+    box-shadow: 0 4px 10px rgba(255, 255, 255, 0.1);
+  }
+  
+  .projeto h3 {
+    color: black;
+  }
+  
+  .contato {
+    background-color: black;
+    box-shadow: 0 4px 10px rgba(255, 255, 255, 0.1);
+  }
+  
+  .contato h2 {
+    color: white;
+  }
+  
+  .contato label {
+    color: lightgray;
+  }
+  
+  .contato input,
+  .contato textarea {
+    border-color: #ccc;
+  }
+  
+  .contato button {
+    background-color: white;
+    color: black;
+  }
+  
+  footer {
+    background-color: black;
+    color: white;
+  }
+  
+  footer p {
+    color: white;
+  }
+}

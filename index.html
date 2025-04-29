@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Minha Primeira Página</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/site-colors.css"/>
+  </head>
+  <body>
+    <div id="intro-screen">
+      <spline-viewer id="spline-welcome" url="https://prod.spline.design/DnzAB-6z7jxJE8Nz/scene.splinecode"></spline-viewer>
+    </div>
+
+    <div id="conteudo">
+      <header id="inicio">
+        <h2>Aléssio | Desenvolvedor</h2>
+        <nav>
+          <a href="index.html">Início</a>
+          <a href="projetos.html">Projetos</a>
+          <a href="contato.html">Contato</a>
+          <a href="sobre.html">Sobre</a>
+        </nav>
+      </header>
+      
+      <main>
+        <div class="caixa">
+          <canvas id="sp"></canvas>
+        </div>
+  
+        <section class="sobre">
+          <spline-viewer url="https://prod.spline.design/PmK0uxWiCXWbOGYG/scene.splinecode"></spline-viewer>
+          <!-- <h2>Sobre Mim</h2>
+          <p>
+            Meu nome é Aléssio, tenho 21 anos e sou desenvolvedor de software.
+            Atualmente curso Bacharelado em Engenharia de Software pela Uninter e tenho maior afinidade com JavaScript do que com qualquer outra linguagem de programação.
+          </p>
+          
+          <br>
+
+          <p>
+            Sou também católico, o que molda meus valores pessoais e profissionais.
+            Acredito na honestidade, no respeito e na dedicação como princípios fundamentais não apenas na vida, mas também no trabalho.
+            Carrego comigo a convicção de que a verdadeira excelência vem do compromisso sincero com o bem e com a verdade.
+          </p>
+
+          <br>
+
+          <p>
+            Minha jornada na programação não começou com livros ou cursos, mas com um sonho: criar um jogo igual a bonk.io, porém, melhor.
+            Sem saber o que era código, busquei construir como uma "pessoa comum" criaria um site no Wix.
+            Mas a curiosidade me levou mais longe: encontrei o Unity, e, mesmo sem entender a linguagem, comecei a montar códigos, guiado apenas pela vontade de fazer acontecer.
+          </p>
+
+          <br>
+
+          <p>
+            Foi através da prática crua, do erro e da persistência que aprendi.
+            Como uma inteligência em fase de aprendizado, evoluí experimentando, adaptando e desafiando o que parecia ser obstáculo.
+          </p>
+
+          <br>
+
+          <p>
+            No universo do HaxBall (outro jogo), onde a criatividade parecia ter limites invisíveis, eu vi oportunidades onde outros viam impossibilidades.
+            Inovei, criei o inédito, e inspirei outros a irem além.
+            Não porque sabia mais, mas porque enxergava mais longe.
+          </p>
+
+          <br>
+
+          <p>
+            Não fui moldado por métodos tradicionais. Fui moldado pela necessidade de construir o que ainda não existia.
+            Aprendi a programar para realizar sonhos, não apenas sistemas.
+          </p>
+
+          <br>
+
+          <p>
+            Durante anos, me dediquei a projetos pessoais envolvendo o HaxBall — o que incluía, além da criação de bots para salas, integrações com Discord e outros sistemas externos — e outros jogos.
+            Não busquei quantidade nem projetos simples.
+            No entanto, não guardei registros dos projetos que criei, o que hoje reconheço como um erro.
+            Alguns desses projetos eu realmente não compartilharia, para que não fossem copiados.
+          </p>
+
+          <br>
+
+          <p>
+            Hoje, busco oportunidades, especialmente as que desafiem o comum, que me permitam criar o diferente e expandir o que é possível através do código e da visão.
+            Não procuro apenas escrever linhas de programação — procuro construir pontes entre o que é e o que pode ser.
+          </p>
+        -->
+
+        </section>
+  
+        <section class="projetos">
+          <h2>Meus Projetos</h2>
+  
+          <div class="lista-projetos">
+            <div class="projeto">
+              <img src="https://cdn.pixabay.com/photo/2016/03/29/08/48/project-1287781_640.jpg" alt="Projeto 1">
+              <h3>Projeto 1</h3>
+              <p>Esse é um projeto fictício criado para treinar HTML e CSS.</p>
+              <button>Ver mais</button>
+            </div>
+            
+            <div class="projeto">
+              <img src="https://cdn.pixabay.com/photo/2016/03/29/08/48/project-1287781_640.jpg" alt="Projeto 2">
+              <h3>Projeto 2</h3>
+              <p>Outro projeto de exemplo. Em breve será um sistema real!</p>
+              <button>Ver mais</button>
+            </div>
+          </div>
+        </section>
+  
+        <section class="contato">
+          <h2>Entre em Contato</h2>
+          <form id="form-contato" action="https://formsubmit.co/alessiopcastro@outlook.com" method="POST">
+            <label for="nome">Nome:</label>
+            <input type="text" id="nome" name="Nome" required>
+            
+            <label for="email">E-mail:</label>
+            <input type="email" id="email" name="Email" required>
+            
+            <label for="mensagem">Mensagem:</label>
+            <textarea id="mensagem" name="Mensagem" rows="5" required></textarea>
+            
+            <!-- Evita spam -->
+            <input type="hidden" name="_captcha" value="false">
+            
+            <!-- Redireciona para uma página de sucesso -->
+            <!-- <input type="hidden" name="_next" value="http://localhost:7700/projetos.html"> -->
+            
+            <button type="submit">Enviar</button>
+          </form>
+          <div id="mensagem-sucesso">
+            Mensagem enviada com sucesso!
+          </div>
+        </section>
+      </main>
+      
+      <footer>
+        <p>Desenvolvido por Aléssio &copy; 2025</p>
+      </footer>
+    </div>
+
+    <script type="module" src="https://unpkg.com/@splinetool/viewer@latest/build/spline-viewer.js"></script>
+    <script src="js/ai.js"></script>
+    <script src="js/form.js"></script>
+    <script src="js/animation.js"></script>
+    <script src="js/removeWatermark.js"></script>
+
+    <script type="module">
+      import { Application } from 'https://unpkg.com/@splinetool/runtime@latest/build/runtime.js';
+  
+      const canvas = document.getElementById('sp');
+      const app = new Application(canvas);
+  
+      app.load('https://prod.spline.design/jRgCwa1zLIxSMrBC/scene.splinecode').then(() => {
+        app.addEventListener('mouseDown', (e) => {
+          //console.log('Evento mouseDown capturado:', e);
+          // e.target contém o objeto clicado
+          if (e.target && e.target.name === 'Button') {
+            console.log('Objeto clicado:', e.target.name);
+            // Execute ações específicas aqui
+          }
+        });
+      });
+    </script>
+  </body>
+</html>
