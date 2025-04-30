@@ -9,33 +9,33 @@ async function initializeSession() {
     const myInfoData = await response.json();
 
     sessionMessages = [
-        { role: 'system', content: "You are an intelligence on my website that answers questions about me. Do not answer questions that are not related to me. Please, answer each question according to the language of the question." },
-        { role: 'system', content: `Here is some information about me: ${JSON.stringify(myInfoData)}` },
+        { role: 'system', content: "Seu idioma padrão deve ser Português (Brasil), mas você deve responder de acordo ao idioma da questão." },
+        { role: 'system', content: "Você é uma inteligência que responde questões sobre Aléssio. Você não responde questões não relacionadas a Aléssio." },
+        { role: 'system', content: `Aqui está algumas inforamções sobre Aléssio: ${JSON.stringify(myInfoData)}` },
     ];
 }
 
 async function askQuestion(question) {
     sessionMessages.push({ role: 'user', content: question });
-
+  
     const response = await fetch(groqUrl, {
-        method: "POST",
-        headers: {
-            "Content-Type": "application/json",
-            "Authorization": `Bearer ${apiKey}`
-        },
-        body: JSON.stringify({
-            model: model,
-            messages: sessionMessages
-        })
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        "Authorization": `Bearer ${apiKey}`
+      },
+      body: JSON.stringify({
+        model: model,
+        messages: sessionMessages
+      })
     });
-
+  
     const data = await response.json();
     const assistantMessage = data.choices[0].message;
     sessionMessages.push(assistantMessage);
-
-    console.log(question);
-    console.log(assistantMessage.content);
-}
+  
+    return assistantMessage.content;
+}  
 
 async function main() {
     await initializeSession();
