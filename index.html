@@ -19,6 +19,7 @@
           <a href="contato.html">Contato</a>
           <a href="sobre.html">Sobre</a>
         </nav>
+        <h6 id="visitantes">Visitantes neste momento:</h6>
       </header>
       
       <main>
@@ -144,10 +145,28 @@
       </footer>
     </div>
 
+    <!-- Botão flutuante do chat -->
+    <button id="chat-toggle">💬</button>
+
+    <!-- Janela do chat -->
+    <div id="chat-container" class="hidden">
+      <div id="chat-header">
+        <h3>Chat</h3>
+        <button id="chat-close">✖</button>
+      </div>
+      <div id="chat-box"></div>
+      <form id="chat-form">
+        <input type="text" id="chat-input" placeholder="Digite sua mensagem..." autocomplete="off" required />
+        <button type="submit">Enviar</button>
+      </form>
+    </div>
+
     <script type="module" src="https://unpkg.com/@splinetool/viewer@latest/build/spline-viewer.js"></script>
     <script src="js/ai.js"></script>
     <script src="js/form.js"></script>
     <script src="js/animation.js"></script>
+    <script src="js/js.js"></script>
+    <script src="js/chat.js"></script>
 
     <script type="module">
       import { Application } from 'https://unpkg.com/@splinetool/runtime@latest/build/runtime.js';
@@ -156,14 +175,19 @@
       const app = new Application(canvas);
   
       app.load('https://prod.spline.design/jRgCwa1zLIxSMrBC/scene.splinecode').then(() => {
-        app.addEventListener('mouseDown', (e) => {
-          //console.log('Evento mouseDown capturado:', e);
+        app.addEventListener('mouseHover', (e) => {
+          console.log('Evento mouseDown capturado:', e);
           // e.target contém o objeto clicado
           if (e.target && e.target.name === 'Button') {
             console.log('Objeto clicado:', e.target.name);
             // Execute ações específicas aqui
           }
         });
+
+        canvas.addEventListener('wheel', (e) => {
+          console.log(e)
+          e.preventDefault();
+        }, { passive: false })
       });
     </script>
   </body>
