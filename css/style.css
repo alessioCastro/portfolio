@@ -22,7 +22,6 @@
   zoom: 1;
   pointer-events: none;
   opacity: 0;
-  animation: fadeIn 3s ease forwards 1s;
 }
 
 @keyframes fadeIn {
