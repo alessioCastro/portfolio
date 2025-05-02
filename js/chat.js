@@ -12,6 +12,8 @@ chatToggle.addEventListener('click', () => {
   chatContainer.classList.toggle('hidden');
   if (!initialized) {
     initializeSession().then(() => initialized = true);
+    addMessageToChat('Olá! Sou uma inteligência artificial. Posso responder apenas questões relacionadas a Aléssio. Quer conversar sobre ele? Fique a vontade.', 'ai', true);
+    loadChatHistory();
   }
 });
 
@@ -35,16 +37,32 @@ chatForm.addEventListener('submit', async (event) => {
 });
 
 function addMessageToChat(text, sender, skipSave = false) {
+  const wrapper = document.createElement('div');
+  wrapper.style.display = 'flex';
+  wrapper.style.alignItems = 'flex-start';
+  wrapper.style.margin = '8px 0';
+  wrapper.style.justifyContent = sender === 'user' ? 'flex-end' : 'flex-start';
+
+  const avatar = document.createElement('img');
+  avatar.src = sender === 'user' ? 'https://www.iconpacks.net/icons/2/free-user-icon-3296-thumb.png' : 'https://www.shutterstock.com/image-vector/ai-technology-icon-artificial-intelligence-600nw-2269141251.jpg';
+  avatar.alt = sender === 'user' ? 'Você' : 'IA';
+  avatar.style.width = '32px';
+  avatar.style.height = '32px';
+  avatar.style.borderRadius = '50%';
+  avatar.style.margin = sender === 'user' ? '0 0 0 8px' : '0 8px 0 0';
+
   const bubble = document.createElement('div');
   bubble.textContent = text;
-  bubble.style.margin = '6px 0';
   bubble.style.padding = '10px';
   bubble.style.borderRadius = '10px';
-  bubble.style.maxWidth = '75%';
-  bubble.style.alignSelf = sender === 'user' ? 'flex-end' : 'flex-start';
+  bubble.style.maxWidth = '70%';
   bubble.style.background = sender === 'user' ? '#dcf8c6' : '#eee';
+  bubble.style.color = '#333';
 
-  chatBox.appendChild(bubble);
+  wrapper.appendChild(sender === 'user' ? bubble : avatar);
+  wrapper.appendChild(sender === 'user' ? avatar : bubble);
+
+  chatBox.appendChild(wrapper);
   chatBox.scrollTop = chatBox.scrollHeight;
 
   if (!skipSave) {
@@ -59,5 +77,3 @@ function loadChatHistory() {
   const saved = JSON.parse(sessionStorage.getItem('chatHistory') || '[]');
   saved.forEach(msg => addMessageToChat(msg.text, msg.sender, true));
 }
-
-loadChatHistory();
