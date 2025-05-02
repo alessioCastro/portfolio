@@ -7,7 +7,7 @@
   </head>
   <body>
     <div id="intro-screen">
-      <spline-viewer id="spline-welcome" url="https://prod.spline.design/DnzAB-6z7jxJE8Nz/scene.splinecode"></spline-viewer>
+      <canvas id="spline-welcome"></canvas>
     </div>
 
     <div id="conteudo">
@@ -101,7 +101,7 @@
             <div class="projeto">
               <img src="https://cdn.pixabay.com/photo/2016/03/29/08/48/project-1287781_640.jpg" alt="Projeto 1">
               <h3>Projeto 1</h3>
-              <p>Esse é um projeto fictício criado para treinar HTML e CSS.</p>
+              <p>Um projeto de sistema de pizzaria será indexado.</p>
               <button>Ver mais</button>
             </div>
             
@@ -168,27 +168,6 @@
     <script src="js/js.js"></script>
     <script src="js/chat.js"></script>
 
-    <script type="module">
-      import { Application } from 'https://unpkg.com/@splinetool/runtime@latest/build/runtime.js';
-  
-      const canvas = document.getElementById('sp');
-      const app = new Application(canvas);
-  
-      app.load('https://prod.spline.design/jRgCwa1zLIxSMrBC/scene.splinecode').then(() => {
-        app.addEventListener('mouseHover', (e) => {
-          console.log('Evento mouseDown capturado:', e);
-          // e.target contém o objeto clicado
-          if (e.target && e.target.name === 'Button') {
-            console.log('Objeto clicado:', e.target.name);
-            // Execute ações específicas aqui
-          }
-        });
-
-        canvas.addEventListener('wheel', (e) => {
-          console.log(e)
-          e.preventDefault();
-        }, { passive: false })
-      });
-    </script>
+    <script type="module" src="js/handleSplineScenes.js"></script>
   </body>
 </html>
