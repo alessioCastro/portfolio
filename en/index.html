@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+
+    <title>Portfolio - English</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&amp;display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="../css/style.css" />
+    <link rel="stylesheet" href="../css/bg.css" />
+
+    <!-- Hreflang para SEO -->
+    <link rel="alternate" hreflang="en" href="../en">
+    <link rel="alternate" hreflang="pt" href="../pt">
+</head>
+
+<body>
+    <div class="background"></div>
+
+    <header>
+        <div class="logo">Portfolio</div>
+        <nav>
+            <ul>
+                <li><a class="nav-link active" href=".">Home</a></li>
+                <li><a href="#">Projects</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="languages">
+        <a href="../en/">EN</a>
+        <a href="../pt/">PT</a>
+    </div>
+
+    <div class="modal-overlay">
+        <div class="modal">
+            <h2>Attention!</h2>
+            <p>This portfolio is under development.</p>
+            <button class="close-button">Close</button>
+        </div>
+    </div>
+
+    <main>
+        <div class="scroll-wrapper">
+            <div class="cards-wrapper">
+                <div class="card" id="card-0">
+                    <h3>Bento's Group Website</h3>
+                    <p>A home improvement company website</p>
+                    <a class="button" href="https://www.bentos-group.com">View</a>
+                </div>
+                <div class="card" id="card-1">
+                    <h3>Tone Calibrator</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                    <a class="button" href="#">View</a>
+                </div>
+                <div class="card" id="card-2">
+                    <h3>Project Project</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                    <a class="button" href="#">View</a>
+                </div>
+                <div class="card" id="card-3">
+                    <h3>Browser Game Like HaxBall</h3>
+                    <p>A 2D browser-based soccer game, similar to HaxBall.</p>
+                    <p>(I haven't had time to deploy and attach it yet)</p>
+                    <a class="button" href="#">View</a>
+                </div>
+                <div class="card" id="card-4">
+                    <pre><code class="language-javascript">
+                        <span class="token keyword">const</span> <span class="token constant">myInfo</span> <span class="token operator">=</span> <span class="token punctuation">{</span>
+                            <span class="token property">name</span><span class="token punctuation">:</span> <span class="token string">'Aléssio Castro'</span><span class="token punctuation">,</span>
+                            <span class="token property">age</span><span class="token punctuation">:</span> <span class="token string">'22'</span><span class="token punctuation">,</span>
+                            <span class="token property">email</span><span class="token punctuation">:</span> <span class="token string">'alessiopcastro@outlook.com'</span>
+                            <span class="token property">phone</span><span class="token punctuation">:</span> <span class="token string">'+55 (62) 98428-4511'</span>
+                            <span class="token property">profession</span><span class="token punctuation">:</span> <span class="token string">'Software Developer</span>
+                        <span class="token punctuation">}</span><span class="token punctuation">;</span>
+                    </code></pre>
+                    <h3>Contact</h3>
+                    <form action="mailto:alessiopcastro@outlook.com" method="post">
+                        <label for="name" class="hidden-label">Name:</label>
+                        <input type="text" id="name" name="name" placeholder="Name" autocomplete="name" required>
+
+                        <label for="message" class="hidden-label">Message:</label>
+                        <input type="text" id="message" name="message" placeholder="Message" required></input>
+
+                        <button type="submit" class="button">Submit</button>
+                    </form>
+                </div>
+                <div class="card" id="card-5">
+                    <h3>Sticker Bot for Discord (Pending)</h3>
+                    <p>A bot that gives away stickers to users, allow you to view your personal album and exchange stickerswith others.</p>
+                    <p>(This project was carried out a long time ago and needs to be revised)</p>
+                    <a class="button" href="#">View</a>
+                </div>
+                <div class="card" id="card-6">
+                    <h3>Project Paintrotasking</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                    <a class="button" href="#">View</a>
+                </div>
+                <div class="card" id="card-7">
+                    <h3>Project Paintrotasking</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                    <a class="button" href="#">View</a>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="../js/script.js"></script>
+</body>
+
+</html>
