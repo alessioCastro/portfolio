@@ -9,7 +9,7 @@
 
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&amp;display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="../css/style.css" />
-    <link rel="stylesheet" href="../css/bg.css" />
+    <!-- <link rel="stylesheet" href="../css/bg.css" /> -->
 
     <!-- Hreflang para SEO -->
     <link rel="alternate" hreflang="en" href="../en">
@@ -17,8 +17,6 @@
 </head>
 
 <body>
-    <div class="background"></div>
-
     <header>
         <div class="logo">Portfólio</div>
         <nav>
@@ -31,11 +29,6 @@
         </nav>
     </header>
 
-    <div class="languages">
-        <a href="../en/">EN</a>
-        <a href="../pt/">PT</a>
-    </div>
-
     <div class="modal-overlay">
         <div class="modal">
             <h2>Atenção!</h2>
@@ -46,7 +39,74 @@
 
     <main>
         <div class="scroll-wrapper">
-            <div class="cards-wrapper">
+            <div class="languages">
+                <a href="../en/">EN</a>
+                <a href="../pt/">PT</a>
+            </div>
+            
+            <div class="cards-wrapper" id="cards-wrapper-1">
+                <div class="card" id="card-0">
+                    <h3>Site Bento's Group</h3>
+                    <p>Um site de empresa de reformas residenciais</p>
+                    <a class="button" href="https://www.bentos-group.com">Ver</a>
+                </div>
+                <div class="card" id="card-1">
+                    <h3>Tone Calibrator</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                    <a class="button" href="#">Ver</a>
+                </div>
+                <div class="card" id="card-2">
+                    <h3>Project Project</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                    <a class="button" href="#">Ver</a>
+                </div>
+                <div class="card" id="card-3">
+                    <h3>Jogo de Navegador Como HaxBall (Em Desenvolvimento)</h3>
+                    <p>Um jogo de futebol 2D para navegador, parecido com HaxBall.</p>
+                    <a class="button" href="https://alessiocastro.github.io/soccer-2d">Ver</a>
+                </div>
+                <div class="card" id="card-4">
+                    <pre><code class="language-javascript">
+                        <span class="token keyword">const</span> <span class="token constant">minhaInfo</span> <span class="token operator">=</span> <span class="token punctuation">{</span>
+                            <span class="token property">nome</span><span class="token punctuation">:</span> <span class="token string">'Aléssio Castro'</span><span class="token punctuation">,</span>
+                            <span class="token property">idade</span><span class="token punctuation">:</span> <span class="token string">'22'</span><span class="token punctuation">,</span>
+                            <span class="token property">email</span><span class="token punctuation">:</span> <span class="token string">'alessiopcastro@outlook.com'</span>
+                            <span class="token property">fone</span><span class="token punctuation">:</span> <span class="token string">'+55 (62) 98428-4511'</span>
+                            <span class="token property">profissão</span><span class="token punctuation">:</span> <span class="token string">`Desenvolvedor de &nbsp;&nbsp;&nbsp;&nbsp;Software`</span>
+                        <span class="token punctuation">}</span><span class="token punctuation">;</span>
+                    </code></pre>
+                    <!-- <span class="token property">objetivo</span><span class="token punctuation">:</span> <span class="token string">'Desenvolver soluções web modernas e eficientes, com foco em JavaScript e tecnologias frontend.'</span> -->
+                    <h3>Contato</h3>
+                    <form action="mailto:alessiopcastro@outlook.com" method="post">
+                        <label for="name" class="hidden-label">Nome:</label>
+                        <input type="text" id="name" name="name" placeholder="Nome" autocomplete="name" required>
+
+                        <label for="message" class="hidden-label">Mensagem:</label>
+                        <input type="text" id="message" name="message" placeholder="Mensagem" required></input>
+
+                        <button type="submit" class="button">Enviar</button>
+                    </form>
+                </div>
+                <div class="card" id="card-5">
+                    <h3>Bot de figurinhas para Discord (Pendente)</h3>
+                    <p>Um bot que sorteia figurinhas para usuários, permite ver o álbum pessoal e trocar figurinhas com
+                        outros.</p>
+                    <p>(Esse projeto foi realizado há muito tempo, necessitando revisão)</p>
+                    <a class="button" href="#">Ver</a>
+                </div>
+                <div class="card" id="card-6">
+                    <h3>Project Paintrotasking</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                    <a class="button" href="#">Ver</a>
+                </div>
+                <div class="card" id="card-7">
+                    <h3>Project Paintrotasking</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                    <a class="button" href="#">Ver</a>
+                </div>
+            </div>
+            
+            <div class="cards-wrapper" id="cards-wrapper-2" hidden>
                 <div class="card" id="card-0">
                     <h3>Site Bento's Group</h3>
                     <p>Um site de empresa de reformas residenciais</p>
