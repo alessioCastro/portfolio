@@ -16,7 +16,9 @@
 }
 
 html {
-    background: radial-gradient(circle 25dvw at 35% 40%, #67396a, #0e0b27);
+    background: url('../assets/images/portfolio-background.webp');
+    background-repeat: no-repeat;
+    background-size: cover;
     min-width: 100dvw;
     min-height: 100dvh;
     overflow: hidden;  /* impede que o body role */
