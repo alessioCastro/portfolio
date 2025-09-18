@@ -3,30 +3,40 @@
 
 <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <title>Portfolio - English</title>
+    <title>Aléssio Castro Portfolio | Software Developer</title>
+    <meta name="description"
+        content="Aléssio Castro's portfolio, software developer. Projects in web development, apps, and games. Explore my digital solutions." />
 
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&amp;display=swap" rel="stylesheet" />
+    <!-- Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet" />
+
+    <!-- CSS -->
     <link rel="stylesheet" href="../css/reset.css" />
     <link rel="stylesheet" href="../css/style.css" />
-    <link rel="stylesheet" href="../css/bg.css">
+    <link rel="stylesheet" href="../css/bg.css" />
 
-    <!-- Hreflang for SEO -->
-    <link rel="alternate" hreflang="en" href="../en">
-    <link rel="alternate" hreflang="pt" href="../pt">
+    <!-- Multi-language SEO -->
+    <link rel="alternate" hreflang="en" href="index.html" />
+    <link rel="alternate" hreflang="pt-BR" href="../pt/index.html" />
+
+    <!-- Favicons -->
+    <link rel="icon" type="image/png" href="../assets/images/favicon.png" />
 </head>
 
 <body>
-    <div class="layer stars-back" id="layer1"></div>
-    <div class="layer stars-mid" id="layer2"></div>
-    <div class="layer shapes" id="layer3"></div>
+    <!-- Background layers -->
+    <div class="layer stars-back" id="layer1" aria-hidden="true"></div>
+    <div class="layer stars-mid" id="layer2" aria-hidden="true"></div>
+    <div class="layer shapes" id="layer3" aria-hidden="true"></div>
 
+    <!-- Header -->
     <header>
-        <div class="logo">Portfolio</div>
-        <nav>
+        <div class="logo" aria-label="Portfolio Logo">Portfolio</div>
+        <nav aria-label="Main Navigation">
             <ul>
-                <li><a class="nav-link active" href="#">Home</a></li>
+                <li><a class="nav-link active" href="#" aria-current="page">Home</a></li>
                 <li><a class="nav-link" href="projects.html">Projects</a></li>
                 <li><a class="nav-link" href="about.html">About</a></li>
                 <li><a class="nav-link" href="contact.html">Contact</a></li>
@@ -34,172 +44,122 @@
         </nav>
     </header>
 
-    <dialog class="modal-overlay" role="dialog">
+    <!-- Accessible Modal -->
+    <dialog class="modal-overlay" role="dialog" aria-labelledby="modal-title">
         <div class="modal">
-            <h2>Attention!</h2>
+            <h2 id="modal-title">Attention!</h2>
             <p>This portfolio is under development.</p>
-            <button class="close-button">Close</button>
+            <button class="close-button" aria-label="Close modal">Close</button>
         </div>
     </dialog>
 
-
+    <!-- Content -->
     <div class="scroll-wrapper">
-
-        <div class="languages">
-            <a href="#">EN</a>
-            <a href="../pt/">PT</a>
+        <!-- Language selection -->
+        <div class="languages" aria-label="Language switcher">
+            <a href="#" aria-current="true">EN</a>
+            <a href="../pt/index.html" lang="pt">PT</a>
         </div>
 
         <main>
+            <section class="cards-wrapper" id="cards-wrapper-1" aria-label="Portfolio highlights">
 
-            <div class="cards-wrapper" id="cards-wrapper-1">
+                <!-- Empty card -->
+                <article class="card" id="card-0">
+                    <h3>Empty Block</h3>
+                    <p>(Thinking about what to put)</p>
+                    <a class="button" href="#" aria-disabled="true">Coming Soon</a>
+                </article>
 
-                <div class="card" id="card-0">
-                    <h3>Empty block</h3>
-                    <p>(Thinking what to place here)</p>
-                    <a class="button" href="#"></a>
-                </div>
-
-                <div class="card" id="card-1">
+                <!-- Web Development -->
+                <article class="card" id="card-1">
                     <h3>Web Development</h3>
-                    <p>I build websites and platforms that actually work. My focus is on creating efficient and intuitive digital solutions, from design to functionality.</p>
-                    <p>Check out some of my projects.</p>
+                    <p>I create websites and platforms that actually work. My focus is on building efficient and
+                        intuitive digital solutions, from design to functionality.</p>
+                    <p>See some of my projects.</p>
                     <a class="button" href="projects.html">See websites</a>
-                </div>
+                </article>
 
-                <div class="card" id="card-2">
+                <!-- About Me -->
+                <article class="card" id="card-2">
                     <h3>Get to Know Me Better</h3>
-                    <p>Nice to meet you, I’m Aléssio Castro. At 22, I could have followed the traditional path, but instead I chose to dive headfirst into code, like an artificial intelligence that learns through iteration and repetition. I’m not afraid of making mistakes, because I know continuous practice leads to excellence. My journey proves that action is the best theory. I’m ready to show what this mindset can build.</p>
+                    <p>Hello, I'm Aléssio Castro. At 22 years old, I could have followed the usual path, but I chose to
+                        dive headfirst into coding, like an artificial intelligence learning through iteration and
+                        repetition. I'm not afraid to make mistakes because I know that continuous practice leads to
+                        excellence. My journey is proof that action is the best theory. I'm ready to show what this
+                        mindset can create.</p>
                     <a class="button" href="about.html">Tell me more</a>
-                </div>
+                </article>
 
-                <div class="card" id="card-3">
-                    <h3>Empty block</h3>
-                    <p>(Thinking what to place here)</p>
-                    <a class="button" href="#"></a>
-                </div>
+                <!-- Empty card -->
+                <article class="card" id="card-3">
+                    <h3>Empty Block</h3>
+                    <p>(Thinking about what to put)</p>
+                    <a class="button" href="#" aria-disabled="true">Coming Soon</a>
+                </article>
 
-                <div class="card" id="card-4">
-
+                <!-- Contact -->
+                <article class="card" id="card-4">
                     <pre><code class="language-javascript">
                         <span class="token keyword">const</span> <span class="token constant">myInfo</span> <span class="token operator">=</span> <span class="token punctuation">{</span>
                             <span class="token property">name</span><span class="token punctuation">:</span> <span class="token string">'Aléssio Castro'</span><span class="token punctuation">,</span>
-                            <span class="token property">age</span><span class="token punctuation">:</span> <span class="token string">'22'</span><span class="token punctuation">,</span>
-                            <span class="token property">email</span><span class="token punctuation">:</span> <span class="token string">'alessiopcastro@outlook.com'</span>
-                            <span class="token property">phone</span><span class="token punctuation">:</span> <span class="token string">'+55 (62) 98428-4511'</span>
+                            <span class="token property">age</span><span class="token punctuation">:</span> <span class="token number">22</span><span class="token punctuation">,</span>
+                            <span class="token property">email</span><span class="token punctuation">:</span> <span class="token string">'alessiopcastro@outlook.com'</span><span class="token punctuation">,</span>
+                            <span class="token property">phone</span><span class="token punctuation">:</span> <span class="token string">'+55 (62) 98428-4511'</span><span class="token punctuation">,</span>
                             <span class="token property">profession</span><span class="token punctuation">:</span> <span class="token string">`Software Developer`</span>
                         <span class="token punctuation">}</span><span class="token punctuation">;</span>
                     </code></pre>
 
                     <h3>Contact</h3>
                     <form action="https://formsubmit.co/alessiopcastro@outlook.com" method="post">
-                        <input type="hidden" name="_captcha" value="false">
-                        <input type="hidden" name="_next" value="/index.html">
-                        <input type="hidden" name="_template" value="table">
-                        <input type="hidden" name="_subject" value="New submission!">
+                        <input type="hidden" name="_captcha" value="false" />
+                        <input type="hidden" name="_next" value="/en/index.html" />
+                        <input type="hidden" name="_template" value="table" />
+                        <input type="hidden" name="_subject" value="New contact from portfolio" />
 
-                        <label for="name" class="hidden-label">Name:</label>
-                        <input type="text" id="name" name="name" placeholder="Name" autocomplete="name" required>
+                        <label class="hidden-label" for="name">Name:</label>
+                        <input type="text" id="name" name="name" placeholder="Enter your name" autocomplete="name"
+                            required />
 
-                        <label for="message" class="hidden-label">Message:</label>
-                        <input type="text" id="message" name="message" placeholder="Message" required></input>
+                        <label class="hidden-label" for="message">Message:</label>
+                        <input id="message" name="message" placeholder="Enter your message" required></input>
 
                         <button type="submit" class="button">Send</button>
                     </form>
+                </article>
 
-                </div>
+                <!-- Empty card -->
+                <article class="card" id="card-5">
+                    <h3>Empty Block</h3>
+                    <p>(Thinking about what to put)</p>
+                    <a class="button" href="#" aria-disabled="true">Coming Soon</a>
+                </article>
 
-                <div class="card" id="card-5">
-                    <h3>Empty block</h3>
-                    <p>(Thinking what to place here)</p>
-                    <a class="button" href="#"></a>
-                </div>
-
-                <div class="card" id="card-6">
+                <!-- App Development -->
+                <article class="card" id="card-6">
                     <h3>App Development</h3>
-                    <p>I turn ideas into mobile applications. I’m committed to building products that are not only functional, but also enjoyable to use.</p>
-                    <p>Discover my apps.</p>
-                    <a class="button" href="projects.html">See apps</a>
-                </div>
+                    <p>I turn ideas into mobile applications. I dedicate myself to building products that are not only
+                        functional but also enjoyable to use.</p>
+                    <p>Get to know my apps.</p>
+                    <a class="button" href="projects.html">View apps</a>
+                </article>
 
-                <div class="card" id="card-7">
-                    <h3>Empty block</h3>
-                    <p>(Thinking what to place here)</p>
-                    <a class="button" href="#"></a>
-                </div>
+                <!-- Game Development -->
+                <article class="card" id="card-7">
+                    <h3>Game Development</h3>
+                    <p>I create games that combine logic, design, and fun. My passion is building interactive and
+                        challenging worlds, applying my programming knowledge to bring each idea to life.</p>
+                    <p>See what I've built and explore my creativity.</p>
+                    <a class="button" href="#">See games</a>
+                </article>
 
-            </div>
-
+            </section>
         </main>
-
     </div>
 
-    <script src="../js/script.js"></script>
-
-    <script>
-        function createStars(layer, count) {
-            for (let i = 0; i < count; i++) {
-                const star = document.createElement('div');
-                star.className = 'star';
-                star.style.top = `${Math.random() * 100}vh`;
-                star.style.left = `${Math.random() * 100}vw`;
-                star.style.animationDuration = `${1 + Math.random() * 3}s`;
-                layer.appendChild(star);
-            }
-        }
-
-        createStars(document.querySelector('#layer1'), 100);
-        createStars(document.querySelector('#layer2'), 50);
-
-        for (let i = 0; i < 6; i++) {
-            const shape = document.createElement('div');
-            shape.className = 'shape';
-            shape.style.top = `${Math.random() * 80 + 10}vh`;
-            shape.style.left = `${Math.random() * 90}vw`;
-            shape.style.animationDuration = `${10 + Math.random() * 10}s`;
-            document.querySelector('#layer3').appendChild(shape);
-        }
-
-        let lastScrollX = 0;
-        let lastScrollY = 0;
-        let ticking = false;
-
-        function requestTick() {
-            if (!ticking) {
-                requestAnimationFrame(updateBackground);
-                ticking = true;
-            }
-        }
-
-        function updateBackground() {
-            ticking = false;
-
-            document.querySelector('#layer1').style.transform = `translate(${lastScrollX * 0.1}px, ${lastScrollY * 0.1}px)`;
-            document.querySelector('#layer2').style.transform = `translate(${lastScrollX * 0.3}px, ${lastScrollY * 0.3}px)`;
-            document.querySelector('#layer3').style.transform = `translate(${lastScrollX * 0.5}px, ${lastScrollY * 0.5}px)`;
-        }
-
-        const scrollWrapper = document.querySelector('.scroll-wrapper');
-
-        // Capture window scroll
-        window.addEventListener('scroll', () => {
-            const currentY = window.scrollY;
-            if (currentY !== lastScrollY) {
-                lastScrollY = window.scrollY;
-                requestTick();
-            }
-        });
-
-        // Capture scroll from scroll-wrapper div
-        scrollWrapper.addEventListener('scroll', () => {
-            const currentX = scrollWrapper.scrollLeft;
-            if (currentX !== lastScrollX) {
-                lastScrollX = scrollWrapper.scrollLeft;
-                requestTick();
-            }
-        });
-
-    </script>
+    <!-- Scripts -->
+    <script src="../js/script.js" defer></script>
+    <script src="../js/bg.js" defer></script>
 </body>
 
 </html>
