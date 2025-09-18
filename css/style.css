@@ -2,27 +2,27 @@
     display: none !important;
 }
 
-/* Reset básico */
-* {
-    margin: 0;
-    padding: 0;
-    border: none;
-    background: none;
-    color: inherit;
-    list-style: none;
-    text-decoration: none;
-    cursor: default;
-    box-sizing: border-box;
+html {
+    user-select: none;
+    overflow-x: hidden;
+    scrollbar-width: thin;
+    -webkit-overflow-scrolling: touch;
 }
 
-html {
-    background: url('../assets/images/portfolio-background.webp');
-    background-repeat: no-repeat;
-    background-size: cover;
-    min-width: 100dvw;
+html,
+body {
     min-height: 100dvh;
-    overflow: hidden;  /* impede que o body role */
-    user-select: none;
+    background: url('../assets/images/portfolio-background.webp') no-repeat center center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+/* Estilos de corpo e main para centralização */
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #080a29;
+    color: #eae9f6;
+    cursor: crosshair;
 }
 
 /* Cabeçalho */
@@ -30,6 +30,7 @@ header {
     padding: 1rem;
     width: 100dvw;
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
 }
 
@@ -68,12 +69,6 @@ nav a:hover {
     border-color: #67396a;
 }
 
-/* Estilos de corpo e main para centralização */
-body {
-    font-family: 'Inter', sans-serif;
-    color: #eae9f6;
-}
-
 .languages {
     display: flex;
     gap: 15px;
@@ -97,6 +92,7 @@ body {
     from {
         opacity: 0;
     }
+
     to {
         opacity: 1;
     }
@@ -127,17 +123,19 @@ body {
 }
 
 .scroll-wrapper {
-    width: 100dvw;
-    height: 100dvh;
+    scrollbar-width: thin;
     overflow: auto;
     -webkit-overflow-scrolling: touch; /* suaviza scroll no iOS */
 }
 
 .cards-wrapper {
-    position: relative; /* mantém position absolute nos cards */
+    position: relative;
+    /* mantém position absolute nos cards */
     width: 1490px;
     height: 900px;
-    border: 1px solid rgba(255, 255, 255, 0.2); /* Borda apenas para visualização do palco */
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    /* Borda apenas para visualização do palco */
+    border-radius: 5px;
 }
 
 /* Estilos básicos dos cards */
@@ -153,7 +151,8 @@ body {
     flex-direction: column;
     gap: 10px;
     backdrop-filter: blur(1px);
-    -webkit-backdrop-filter: blur(1px); /* Suporte Safari */
+    -webkit-backdrop-filter: blur(1px);
+    /* Suporte Safari */
 }
 
 .card:hover {
@@ -257,12 +256,12 @@ form .button {
 }
 
 input {
+    color: white;
     background-color: #2d2c3e;
     border-radius: 0.5rem;
-    padding: 0.75rem;
+    padding: 0.85rem;
     margin-bottom: 1rem;
-    font-size: 0.875rem; /* Isso equivale a 14px */
-    line-height: 1.25rem; /* Isso equivale a 20px */
+    font-size: 0.875rem;
 }
 
 .hidden-label {
@@ -303,6 +302,19 @@ pre {
     color: #4ade80;
 }
 
+.programming-languages-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    margin-left: 20px;
+    margin-top: 10px;
+}
+
+.programming-languages-wrapper img {
+    width: 50px;
+}
+
 
 
 @media (min-width: 1500px) {
@@ -312,8 +324,8 @@ pre {
     }
 }
 
-@media (max-width: 768px) {
+/* @media (max-width: 768px) {
     .scroll-wrapper {
-        height: calc(100dvh - 10dvh); /* 1px a menos que a viewport real */
+        height: calc(100dvh - 10dvh);
     }
-}
+} */
