@@ -1,194 +1,122 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 
 <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Projetos | Portfólio de Aléssio Castro</title>
+    <meta name="description"
+        content="Confira os projetos de Aléssio Castro: sites, jogos e bots desenvolvidos em HTML, CSS, JavaScript e Node.js." />
 
-    <title>Portfólio - Português</title>
+    <!-- SEO e hreflang -->
+    <link rel="alternate" hreflang="pt" href="projects.html" />
+    <link rel="alternate" hreflang="en" href="../en/projects.html" />
 
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&amp;display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="../css/reset.css">
+    <!-- Fonts e CSS -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="../css/reset.css" />
+    <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="../css/projects-style.css" />
-    <link rel="stylesheet" href="../css/bg.css">
-
-    <!-- Hreflang para SEO -->
-    <link rel="alternate" hreflang="en" href="../en">
-    <link rel="alternate" hreflang="pt" href="../pt">
+    <link rel="stylesheet" href="../css/bg.css" />
 </head>
 
 <body>
     <header>
         <div class="logo">Portfólio</div>
-        <nav>
+        <nav aria-label="Menu principal">
             <ul>
                 <li><a class="nav-link" href="index.html">Início</a></li>
-                <li><a class="nav-link active" href="#">Projetos</a></li>
+                <li><a class="nav-link active" aria-current="page" href="#">Projetos</a></li>
                 <li><a class="nav-link" href="about.html">Sobre</a></li>
                 <li><a class="nav-link" href="contact.html">Contato</a></li>
             </ul>
         </nav>
     </header>
 
-    <div class="modal-overlay">
+    <div class="modal-overlay" role="dialog" aria-labelledby="modal-title" aria-describedby="modal-desc">
         <div class="modal">
-            <h2>Atenção!</h2>
-            <p>Este portfólio se encontra em desenvolvimento.</p>
-            <button class="close-button">Fechar</button>
+            <h2 id="modal-title">Atenção!</h2>
+            <p id="modal-desc">Este portfólio se encontra em desenvolvimento.</p>
+            <button class="close-button" aria-label="Fechar modal">Fechar</button>
         </div>
     </div>
 
-    <div class="languages">
-        <a href="../en/projects.html">EN</a>
-        <a href="#">PT</a>
+    <div class="languages" aria-label="Troca de idioma">
+        <a href="../en/projects.html" lang="en">EN</a>
+        <a href="#" aria-current="true">PT</a>
     </div>
 
     <main>
+        <h1>Projetos</h1>
 
-        <div class="cards-wrapper">
-
-            <div class="card">
-                <h3>Site Bento's Group</h3>
-                <p>Um site de empresa de reformas residenciais</p>
+        <section class="projects-wrapper">
+            <article class="project-card">
+                <h2>Site Bento's Group</h2>
+                <p>Um site de empresa de reformas residenciais.</p>
                 <div class="programming-languages-wrapper">
                     <img src="https://www.w3.org/html/logo/badge/html5-badge-h-solo.png" width="30" height="30"
-                        alt="HTML5 Powered" title="HTML5 Powered">
+                        alt="HTML5" title="HTML5">
                     <img src="https://upload.wikimedia.org/wikipedia/commons/6/62/CSS3_logo.svg" width="30" height="30"
-                        alt="">
+                        alt="CSS3" title="CSS3">
                     <img src="https://upload.wikimedia.org/wikipedia/commons/9/99/Unofficial_JavaScript_logo_2.svg"
-                        width="30" height="30" alt="">
+                        width="30" height="30" alt="JavaScript" title="JavaScript">
                 </div>
-                <a class="button" href="https://www.bentos-group.com">Ver</a>
-            </div>
+                <a class="button" href="https://www.bentos-group.com" target="_blank" rel="noopener">Ver projeto</a>
+            </article>
 
-            <div class="card">
-                <h3>Jogo de Navegador Como HaxBall (Em Desenvolvimento)</h3>
-                <p>Um jogo de futebol 2D para navegador, parecido com HaxBall.</p>
+            <article class="project-card">
+                <h2>Jogo de Navegador (em desenvolvimento)</h2>
+                <p>Um jogo de futebol 2D para navegador, inspirado no HaxBall.</p>
                 <div class="programming-languages-wrapper">
                     <img src="https://www.w3.org/html/logo/badge/html5-badge-h-solo.png" width="30" height="30"
-                        alt="HTML5 Powered" title="HTML5 Powered">
+                        alt="HTML5" title="HTML5">
                     <img src="https://upload.wikimedia.org/wikipedia/commons/6/62/CSS3_logo.svg" width="30" height="30"
-                        alt="">
+                        alt="CSS3" title="CSS3">
                     <img src="https://upload.wikimedia.org/wikipedia/commons/9/99/Unofficial_JavaScript_logo_2.svg"
-                        width="30" height="30" alt="">
+                        width="30" height="30" alt="JavaScript" title="JavaScript">
                 </div>
-                <a class="button" href="https://alessiocastro.github.io/soccer-2d">Ver</a>
-            </div>
+                <a class="button" href="https://alessiocastro.github.io/soccer-2d" target="_blank" rel="noopener">Ver
+                    projeto</a>
+            </article>
 
-            <div class="card">
-                <h3>Bot de figurinhas para Discord (Pendente)</h3>
+            <article class="project-card">
+                <h2>Bot de Figurinhas para Discord (pendente)</h2>
                 <p>Um bot que sorteia figurinhas para usuários, permite ver o álbum pessoal e trocar figurinhas com
                     outros.</p>
-                <p>(Esse projeto foi realizado há muito tempo, necessitando revisão)</p>
+                <p><em>Este projeto foi realizado há muito tempo e precisa de revisão.</em></p>
                 <div class="programming-languages-wrapper">
                     <img src="https://upload.wikimedia.org/wikipedia/commons/9/99/Unofficial_JavaScript_logo_2.svg"
-                        width="30" height="30" alt="">
-                    <img src="https://www.vectorlogo.zone/logos/nodejs/nodejs-icon.svg" width="30" height="30" alt="">
+                        width="30" height="30" alt="JavaScript" title="JavaScript">
+                    <img src="https://www.vectorlogo.zone/logos/nodejs/nodejs-icon.svg" width="30" height="30"
+                        alt="Node.js" title="Node.js">
                 </div>
-                <a class="button" href="#">Ver</a>
-            </div>
+                <a class="button" href="#" aria-disabled="true">Indisponível</a>
+            </article>
 
-            <div class="card">
-                <h3>Site de filtro de imagem duplicada</h3>
-                <p>Um bot que sorteia figurinhas para usuários, permite ver o álbum pessoal e trocar figurinhas com
-                    outros.</p>
-                <p>(Esse projeto foi realizado há muito tempo, necessitando revisão)</p>
+            <article class="project-card">
+                <h2>Site de Filtro de Imagem Duplicada</h2>
+                <p>Ferramenta para identificar imagens duplicadas.</p>
                 <div class="programming-languages-wrapper">
                     <img src="https://www.w3.org/html/logo/badge/html5-badge-h-solo.png" width="30" height="30"
-                        alt="HTML5 Powered" title="HTML5 Powered">
+                        alt="HTML5" title="HTML5">
                     <img src="https://upload.wikimedia.org/wikipedia/commons/6/62/CSS3_logo.svg" width="30" height="30"
-                        alt="">
+                        alt="CSS3" title="CSS3">
                     <img src="https://upload.wikimedia.org/wikipedia/commons/9/99/Unofficial_JavaScript_logo_2.svg"
-                        width="30" height="30" alt="">
+                        width="30" height="30" alt="JavaScript" title="JavaScript">
                 </div>
-                <a class="button" href="#">Ver</a>
-            </div>
-
-        </div>
-
+                <a class="button" href="#" aria-disabled="true">Indisponível</a>
+            </article>
+        </section>
     </main>
 
+    <!-- Camadas de fundo -->
     <div class="layer stars-back" id="layer1"></div>
     <div class="layer stars-mid" id="layer2"></div>
     <div class="layer shapes" id="layer3"></div>
 
-    <script>
-        const closeButton = document.querySelector('.modal .close-button');
-        const modalOverlay = document.querySelector('.modal-overlay');
-
-        // Verifica se o usuário já visitou o site nesta sessão
-        if (!sessionStorage.getItem('hasVisited')) {
-            // Primeira visita nesta sessão
-            sessionStorage.setItem('hasVisited', 'true'); // Marca que o usuário já visitou
-            sessionStorage.setItem('modalClosed', 'false'); // Marca que o modal ainda não foi fechado
-        } else {
-            // Não é a primeira visita
-            if (sessionStorage.getItem('modalClosed') === 'true') {
-                // O modal já foi fechado anteriormente, então remove-o da tela
-                modalOverlay.remove();
-            }
-        }
-
-        closeButton.addEventListener('click', () => {
-            modalOverlay.remove();
-            sessionStorage.setItem('modalClosed', 'true'); // Marca que o modal foi fechado
-        });
-    </script>
-
-    <script>
-        function createStars(layer, count) {
-            for (let i = 0; i < count; i++) {
-                const star = document.createElement('div');
-                star.className = 'star';
-                star.style.top = `${Math.random() * 100}vh`;
-                star.style.left = `${Math.random() * 100}vw`;
-                star.style.animationDuration = `${1 + Math.random() * 3}s`;
-                layer.appendChild(star);
-            }
-        }
-
-        createStars(document.querySelector('#layer1'), 100);
-        createStars(document.querySelector('#layer2'), 50);
-
-        for (let i = 0; i < 6; i++) {
-            const shape = document.createElement('div');
-            shape.className = 'shape';
-            shape.style.top = `${Math.random() * 80 + 10}vh`;
-            shape.style.left = `${Math.random() * 90}vw`;
-            shape.style.animationDuration = `${10 + Math.random() * 10}s`;
-            document.querySelector('#layer3').appendChild(shape);
-        }
-
-        let lastScrollX = 0;
-        let lastScrollY = 0;
-        let ticking = false;
-
-        function requestTick() {
-            if (!ticking) {
-                requestAnimationFrame(updateBackground);
-                ticking = true;
-            }
-        }
-
-        function updateBackground() {
-            ticking = false;
-
-            document.querySelector('#layer1').style.transform = `translate(${lastScrollX * 0.1}px, ${lastScrollY * 0.1}px)`;
-            document.querySelector('#layer2').style.transform = `translate(${lastScrollX * 0.3}px, ${lastScrollY * 0.3}px)`;
-            document.querySelector('#layer3').style.transform = `translate(${lastScrollX * 0.5}px, ${lastScrollY * 0.5}px)`;
-        }
-
-        const scrollWrapper = document.querySelector('.scroll-wrapper');
-
-        // Captura scroll da janela
-        window.addEventListener('scroll', () => {
-            const currentY = window.scrollY;
-            if (currentY !== lastScrollY) {
-                lastScrollY = window.scrollY;
-                requestTick();
-            }
-        });
-    </script>
+    <!-- Scripts -->
+    <script src="../js/script.js" defer></script>
+    <script src="../js/bg.js" defer></script>
 </body>
 
 </html>
