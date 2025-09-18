@@ -1,7 +1,26 @@
+/* ===========================
+   Variáveis e Reset
+=========================== */
+:root {
+    --color-bg: #080a29;
+    --color-text: #eae9f6;
+    --color-accent: #67396a;
+    --color-button-bg: radial-gradient(circle 110px at 50% -10px, #e4d7fb, #b197e0);
+    --color-button-text: #312557;
+    --color-modal-bg: black;
+    --color-modal-shadow: #eae9f6;
+    --color-card-border: #eae9f6;
+    --color-card-hover-shadow: rgba(160, 32, 240, 0.4);
+    --font-family: 'Inter', sans-serif;
+}
+
 [hidden] {
     display: none !important;
 }
 
+/* ===========================
+   Base do HTML e Body
+=========================== */
 html {
     user-select: none;
     overflow-x: hidden;
@@ -9,23 +28,23 @@ html {
     -webkit-overflow-scrolling: touch;
 }
 
-html,
-body {
+html, body {
     min-height: 100dvh;
+    font-family: var(--font-family);
     background: url('../assets/images/portfolio-background.webp') no-repeat center center;
     background-size: cover;
     background-attachment: fixed;
+    color: var(--color-text);
 }
 
-/* Estilos de corpo e main para centralização */
 body {
-    font-family: 'Inter', sans-serif;
-    background-color: #080a29;
-    color: #eae9f6;
     cursor: crosshair;
+    background-color: var(--color-bg);
 }
 
-/* Cabeçalho */
+/* ===========================
+   Cabeçalho
+=========================== */
 header {
     padding: 1rem;
     width: 100dvw;
@@ -34,14 +53,10 @@ header {
     align-items: center;
 }
 
-h3 {
-    font-weight: 500;
-}
-
 .logo {
     font-size: 1.5rem;
     font-weight: 500;
-    color: #eae9f6;
+    color: var(--color-text);
     margin-right: auto;
 }
 
@@ -57,16 +72,16 @@ nav a {
 }
 
 nav a:hover {
-    color: #67396a;
+    color: var(--color-accent);
 }
 
 .nav-link.active {
-    border-bottom: 1px solid #eae9f6;
+    border-bottom: 1px solid var(--color-text);
     padding-bottom: 5px;
 }
 
 .nav-link.active:hover {
-    border-color: #67396a;
+    border-color: var(--color-accent);
 }
 
 .languages {
@@ -75,6 +90,9 @@ nav a:hover {
     margin-left: 20px;
 }
 
+/* ===========================
+   Modal
+=========================== */
 .modal-overlay {
     z-index: 1;
     background: rgba(0, 0, 0, 0.5);
@@ -89,20 +107,15 @@ nav a:hover {
 }
 
 @keyframes appear {
-    from {
-        opacity: 0;
-    }
-
-    to {
-        opacity: 1;
-    }
+    from { opacity: 0; }
+    to { opacity: 1; }
 }
 
 .modal {
-    color: white;
-    background: black;
+    color: var(--color-text);
+    background: var(--color-modal-bg);
     border-radius: 10px;
-    box-shadow: 0 0 10px #eae9f6;
+    box-shadow: 0 0 10px var(--color-modal-shadow);
     max-width: 400px;
     min-height: 300px;
     padding: 20px;
@@ -123,52 +136,50 @@ nav a:hover {
     cursor: pointer;
 }
 
+/* ===========================
+   Scroll wrapper
+=========================== */
 .scroll-wrapper {
     scrollbar-width: thin;
     overflow: auto;
-    -webkit-overflow-scrolling: touch; /* suaviza scroll no iOS */
+    -webkit-overflow-scrolling: touch;
 }
 
+/* ===========================
+   Cards Wrapper
+=========================== */
 .cards-wrapper {
     position: relative;
-    /* mantém position absolute nos cards */
     width: 1490px;
     height: 900px;
     border: 1px solid rgba(255, 255, 255, 0.2);
-    /* Borda apenas para visualização do palco */
     border-radius: 5px;
 }
 
-/* Estilos básicos dos cards */
+/* ===========================
+   Cards
+=========================== */
 .card {
     position: absolute;
     background-color: rgba(0, 0, 0, 0.2);
-    border: 1px solid #eae9f6;
+    border: 1px solid var(--color-card-border);
     border-radius: 10px;
     padding: 1rem;
-    /*box-shadow: 0 0 10px #67396a;*/
-    transition: transform 0.3s ease;
     display: flex;
     flex-direction: column;
     gap: 10px;
     backdrop-filter: blur(1px);
     -webkit-backdrop-filter: blur(1px);
-    /* Suporte Safari */
+    transition: transform 0.3s ease;
 }
 
 .card:hover {
     transform: scale(1.03);
-    box-shadow: 0 0 20px rgba(160, 32, 240, 0.4);
-    /* Sombra mais intensa no hover */
+    box-shadow: 0 0 20px var(--color-card-hover-shadow);
 }
 
-.card h3 {
-    font-size: 1.2rem;
-}
-
-.card p {
-    font-size: 0.95rem;
-}
+.card h3 { font-size: 1.2rem; }
+.card p { font-size: 0.95rem; }
 
 .card:not(#card-4) .button {
     border-radius: 1rem;
@@ -179,78 +190,25 @@ nav a:hover {
     margin-top: auto;
 }
 
-/* POSICIONAMENTO EXATO DOS CARDS */
-/* Usando top/left em relação ao main. */
-/* Os valores foram ajustados para que o layout fique centralizado e se pareça com a sua imagem. */
-#card-0 {
-    width: 220px;
-    height: 240px;
-    top: 300px;
-    left: 5px;
-}
+/* ===========================
+   Posicionamento exato dos cards
+   (mantido integralmente)
+=========================== */
+#card-0 { width: 220px; height: 240px; top: 300px; left: 5px; }
+#card-1 { width: 300px; height: 300px; top: 140px; left: 240px; }
+#card-2 { width: 350px; height: 370px; top: 70px; left: 555px; }
+#card-3 { width: 200px; height: 340px; top: 100px; left: 920px; }
+#card-4 { width: 350px; height: 550px; top: 195px; left: 1135px; padding: 40px; }
+#card-5 { width: 200px; height: 350px; top: 460px; left: 240px; }
+#card-6 { width: 300px; height: 290px; top: 475px; left: 455px; }
+#card-7 { width: 350px; height: 270px; top: 475px; left: 770px; }
 
-#card-1 {
-    width: 300px;
-    height: 300px;
-    top: 140px;
-    left: 240px;
-}
-
-#card-2 {
-    width: 350px;
-    height: 370px;
-    top: 70px;
-    left: 555px;
-}
-
-#card-3 {
-    width: 200px;
-    height: 340px;
-    top: 100px;
-    left: 920px;
-}
-
-#card-4 {
-    width: 350px;
-    height: 550px;
-    top: 195px;
-    left: 1135px;
-    padding: 40px;
-}
-
-#card-5 {
-    width: 200px;
-    height: 350px;
-    top: 460px;
-    left: 240px;
-}
-
-#card-6 {
-    width: 300px;
-    height: 290px;
-    top: 475px;
-    left: 455px;
-}
-
-#card-7 {
-    width: 350px;
-    height: 270px;
-    top: 475px;
-    left: 770px;
-}
-
-#card-4 h3 {
-    margin-top: auto;
-}
-
-#card-4 form {
-    display: flex;
-    flex-direction: column;
-}
+#card-4 h3 { margin-top: auto; }
+#card-4 form { display: flex; flex-direction: column; }
 
 form .button {
-    background: radial-gradient(circle 110px at 50% -10px, #e4d7fb, #b197e0);
-    color: #312557;
+    background: var(--color-button-bg);
+    color: var(--color-button-text);
     border-radius: 2rem;
     padding: 0.8rem;
     font-size: 1rem;
@@ -269,55 +227,31 @@ input {
     position: absolute;
     width: 1px;
     height: 1px;
-    padding: 0;
-    margin: -1px;
     overflow: hidden;
     clip: rect(0, 0, 0, 0);
     white-space: nowrap;
-    border: 0;
 }
 
+/* ===========================
+   Código com Highlight
+=========================== */
 pre {
     white-space: break-spaces;
     user-select: text;
-    width: 300px;
+    max-width: 300px;
     position: absolute;
     right: 20px;
 }
 
-.token.keyword {
-    color: #a78bfa;
-    /* Cor roxa (text-purple-400 do Tailwind) */
-}
+.token.keyword { color: #a78bfa; }
+.token.constant { color: #60a5fa; }
+.token.string { color: #fcd34d; }
+.token.property { color: #4ade80; }
+.token.number { color: #e06d75; }
 
-.token.constant {
-    color: #60a5fa;
-}
-
-.token.string {
-    color: #fcd34d;
-    /* Cor amarela (text-yellow-400 do Tailwind) */
-}
-
-.token.property {
-    color: #4ade80;
-}
-
-.programming-languages-wrapper {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 15px;
-    margin-left: 20px;
-    margin-top: 10px;
-}
-
-.programming-languages-wrapper img {
-    width: 50px;
-}
-
-
-
+/* ===========================
+   Responsividade
+=========================== */
 @media (min-width: 1500px) {
     .cards-wrapper {
         left: 50%;
@@ -325,6 +259,9 @@ pre {
     }
 }
 
+/* ===========================
+   Comentários de media query desativados
+=========================== */
 /* @media (max-width: 768px) {
     .scroll-wrapper {
         height: calc(100dvh - 10dvh);
