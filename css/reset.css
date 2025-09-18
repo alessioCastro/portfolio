@@ -2,21 +2,23 @@
 *,
 *::before,
 *::after {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 /* Remover estilos de listas */
-ul, ol, menu {
-  list-style: none;
+ul,
+ol,
+menu {
+    list-style: none;
 }
 
 /* Links limpos */
 a {
-  text-decoration: none;
-  color: inherit;
-  cursor: inherit;
+    text-decoration: none;
+    color: inherit;
+    cursor: inherit;
 }
 
 /* Botões e campos */
@@ -24,14 +26,16 @@ button,
 input,
 textarea,
 select {
-  background: none;
-  border: none;
-  outline: none;
+    background: none;
+    border: none;
+    outline: none;
 }
 
 /* Botões ainda clicáveis */
-button, .button {
-  cursor: inherit;
+button,
+.button {
+    color: inherit;
+    cursor: inherit;
 }
 
 /* Tipos de input especiais sem aparência nativa */
@@ -40,9 +44,9 @@ input[type="number"],
 input[type="email"],
 input[type="text"],
 textarea {
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
 }
 
 /* Imagens, vídeos e SVGs */
@@ -51,25 +55,26 @@ picture,
 video,
 canvas,
 svg {
-  display: block;
-  max-width: 100%;
-  height: auto;
+    display: block;
+    max-width: 100%;
+    height: auto;
 }
 
 /* Tabelas limpas */
 table {
-  border-collapse: collapse;
-  border-spacing: 0;
+    border-collapse: collapse;
+    border-spacing: 0;
 }
 
 /* Remover citações padrões */
-blockquote, q {
-  quotes: none;
+blockquote,
+q {
+    quotes: none;
 }
 
 blockquote::before,
 blockquote::after,
 q::before,
 q::after {
-  content: '';
+    content: '';
 }
