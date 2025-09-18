@@ -8,8 +8,9 @@
     <title>Portfólio - Português</title>
 
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&amp;display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="../css/reset.css">
     <link rel="stylesheet" href="../css/style.css" />
-    <!-- <link rel="stylesheet" href="../css/bg.css" /> -->
+    <link rel="stylesheet" href="../css/bg.css">
 
     <!-- Hreflang para SEO -->
     <link rel="alternate" hreflang="en" href="../en">
@@ -17,160 +18,197 @@
 </head>
 
 <body>
+    <div class="layer stars-back" id="layer1"></div>
+    <div class="layer stars-mid" id="layer2"></div>
+    <div class="layer shapes" id="layer3"></div>
+
     <header>
         <div class="logo">Portfólio</div>
         <nav>
             <ul>
-                <li><a class="nav-link active" href=".">Início</a></li>
-                <li><a href="#">Projetos</a></li>
-                <li><a href="#">Sobre</a></li>
-                <li><a href="#">Contato</a></li>
+                <li><a class="nav-link active" href="#">Início</a></li>
+                <li><a class="nav-link" href="projects.html">Projetos</a></li>
+                <li><a class="nav-link" href="about.html">Sobre</a></li>
+                <li><a class="nav-link" href="contact.html">Contato</a></li>
             </ul>
         </nav>
     </header>
 
-    <div class="modal-overlay">
+    <dialog class="modal-overlay" role="dialog">
         <div class="modal">
             <h2>Atenção!</h2>
             <p>Este portfólio se encontra em desenvolvimento.</p>
             <button class="close-button">Fechar</button>
         </div>
+    </dialog>
+
+
+    <div class="scroll-wrapper">
+
+        <div class="languages">
+            <a href="../en/">EN</a>
+            <a href="#">PT</a>
+        </div>
+
+        <main>
+
+            <div class="cards-wrapper" id="cards-wrapper-1">
+
+                <div class="card" id="card-0">
+                    <h3>Bloco vazio</h3>
+                    <p>(Pensando o que colocar)</p>
+                    <a class="button" href="#"></a>
+                </div>
+
+                <div class="card" id="card-1">
+                    <h3>Desenvolvimento Web</h3>
+                    <p>Crio sites e plataformas que funcionam de verdade. Meu foco é na construção de soluções digitais
+                        eficientes e intuitivas, do design à funcionalidade.</p>
+                    <p>Veja alguns dos meus projetos.</p>
+                    <a class="button" href="projects.html">Ver sites</a>
+                </div>
+
+                <div class="card" id="card-2">
+                    <h3>Conheça-me Melhor</h3>
+                    <p>Prazer, sou Aléssio Castro. Aos 22 anos, eu poderia ter seguido a cartilha, mas preferi me jogar
+                        de cabeça no código, como uma inteligência artificial que aprende com a iteratividade e a
+                        repetição. Não tenho medo de errar, pois sei que a prática contínua me leva à excelência. Minha
+                        jornada é uma prova de que a ação é a melhor teoria. Estou pronto para mostrar o que essa
+                        mentalidade pode construir.</p>
+                    <a class="button" href="about.html">Conte-me mais</a>
+                </div>
+
+                <div class="card" id="card-3">
+                    <h3>Bloco vazio</h3>
+                    <p>(Pensando o que colocar)</p>
+                    <a class="button" href="#"></a>
+                </div>
+
+                <div class="card" id="card-4">
+
+                    <pre><code class="language-javascript">
+                        <span class="token keyword">const</span> <span class="token constant">minhaInfo</span> <span class="token operator">=</span> <span class="token punctuation">{</span>
+                            <span class="token property">nome</span><span class="token punctuation">:</span> <span class="token string">'Aléssio Castro'</span><span class="token punctuation">,</span>
+                            <span class="token property">idade</span><span class="token punctuation">:</span> <span class="token string">'22'</span><span class="token punctuation">,</span>
+                            <span class="token property">email</span><span class="token punctuation">:</span> <span class="token string">'alessiopcastro@outlook.com'</span>
+                            <span class="token property">fone</span><span class="token punctuation">:</span> <span class="token string">'+55 (62) 98428-4511'</span>
+                            <span class="token property">profissão</span><span class="token punctuation">:</span> <span class="token string">`Desenvolvedor de &nbsp;&nbsp;&nbsp;&nbsp;Software`</span>
+                        <span class="token punctuation">}</span><span class="token punctuation">;</span>
+                    </code></pre>
+                    <!-- <span class="token property">objetivo</span><span class="token punctuation">:</span> <span class="token string">'Desenvolver soluções web modernas e eficientes, com foco em JavaScript e tecnologias frontend.'</span> -->
+                    
+                    <h3>Contato</h3>
+                    <form action="https://formsubmit.co/alessiopcastro@outlook.com" method="post">
+                        <input type="hidden" name="_captcha" value="false">
+                        <input type="hidden" name="_next" value="/index.html">
+                        <input type="hidden" name="_template" value="table">
+                        <input type="hidden" name="_subject" value="New submission!">
+
+                        <label for="name" class="hidden-label">Nome:</label>
+                        <input type="text" id="name" name="name" placeholder="Nome" autocomplete="name" required>
+
+                        <label for="message" class="hidden-label">Mensagem:</label>
+                        <input type="text" id="message" name="message" placeholder="Mensagem" required></input>
+
+                        <button type="submit" class="button">Enviar</button>
+                    </form>
+                    
+                </div>
+
+                <div class="card" id="card-5">
+                    <h3>Bloco vazio</h3>
+                    <p>(Pensando o que colocar)</p>
+                    <a class="button" href="#"></a>
+                </div>
+
+                <div class="card" id="card-6">
+                    <h3>Desenvolvimento de Apps</h3>
+                    <p>Transformo ideias em aplicativos para celulares. Me dedico a construir produtos que sejam não só
+                        funcionais, mas também agradáveis de usar.</p>
+                    <p>Conheça meus aplicativos.</p>
+                    <a class="button" href="projects.html">Ver apps</a>
+                </div>
+
+                <div class="card" id="card-7">
+                    <h3>Desenvolvimento de Jogos</h3>
+                    <p>Crio jogos que combinam lógica, design e diversão. Minha paixão é construir mundos interativos e
+                        desafiadores, aplicando meus conhecimentos de programação para dar vida a cada ideia.</p>
+                    <p>Veja o que eu já construí e explore a minha criatividade.</p>
+                    <a class="button" href="#">Ver jogos</a>
+                </div>
+
+            </div>
+
+        </main>
+
     </div>
 
-    <main>
-        <div class="scroll-wrapper">
-            <div class="languages">
-                <a href="../en/">EN</a>
-                <a href="../pt/">PT</a>
-            </div>
-            
-            <div class="cards-wrapper" id="cards-wrapper-1">
-                <div class="card" id="card-0">
-                    <h3>Site Bento's Group</h3>
-                    <p>Um site de empresa de reformas residenciais</p>
-                    <a class="button" href="https://www.bentos-group.com">Ver</a>
-                </div>
-                <div class="card" id="card-1">
-                    <h3>Tone Calibrator</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                    <a class="button" href="#">Ver</a>
-                </div>
-                <div class="card" id="card-2">
-                    <h3>Project Project</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                    <a class="button" href="#">Ver</a>
-                </div>
-                <div class="card" id="card-3">
-                    <h3>Jogo de Navegador Como HaxBall (Em Desenvolvimento)</h3>
-                    <p>Um jogo de futebol 2D para navegador, parecido com HaxBall.</p>
-                    <a class="button" href="https://alessiocastro.github.io/soccer-2d">Ver</a>
-                </div>
-                <div class="card" id="card-4">
-                    <pre><code class="language-javascript">
-                        <span class="token keyword">const</span> <span class="token constant">minhaInfo</span> <span class="token operator">=</span> <span class="token punctuation">{</span>
-                            <span class="token property">nome</span><span class="token punctuation">:</span> <span class="token string">'Aléssio Castro'</span><span class="token punctuation">,</span>
-                            <span class="token property">idade</span><span class="token punctuation">:</span> <span class="token string">'22'</span><span class="token punctuation">,</span>
-                            <span class="token property">email</span><span class="token punctuation">:</span> <span class="token string">'alessiopcastro@outlook.com'</span>
-                            <span class="token property">fone</span><span class="token punctuation">:</span> <span class="token string">'+55 (62) 98428-4511'</span>
-                            <span class="token property">profissão</span><span class="token punctuation">:</span> <span class="token string">`Desenvolvedor de &nbsp;&nbsp;&nbsp;&nbsp;Software`</span>
-                        <span class="token punctuation">}</span><span class="token punctuation">;</span>
-                    </code></pre>
-                    <!-- <span class="token property">objetivo</span><span class="token punctuation">:</span> <span class="token string">'Desenvolver soluções web modernas e eficientes, com foco em JavaScript e tecnologias frontend.'</span> -->
-                    <h3>Contato</h3>
-                    <form action="mailto:alessiopcastro@outlook.com" method="post">
-                        <label for="name" class="hidden-label">Nome:</label>
-                        <input type="text" id="name" name="name" placeholder="Nome" autocomplete="name" required>
-
-                        <label for="message" class="hidden-label">Mensagem:</label>
-                        <input type="text" id="message" name="message" placeholder="Mensagem" required></input>
-
-                        <button type="submit" class="button">Enviar</button>
-                    </form>
-                </div>
-                <div class="card" id="card-5">
-                    <h3>Bot de figurinhas para Discord (Pendente)</h3>
-                    <p>Um bot que sorteia figurinhas para usuários, permite ver o álbum pessoal e trocar figurinhas com
-                        outros.</p>
-                    <p>(Esse projeto foi realizado há muito tempo, necessitando revisão)</p>
-                    <a class="button" href="#">Ver</a>
-                </div>
-                <div class="card" id="card-6">
-                    <h3>Project Paintrotasking</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                    <a class="button" href="#">Ver</a>
-                </div>
-                <div class="card" id="card-7">
-                    <h3>Project Paintrotasking</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                    <a class="button" href="#">Ver</a>
-                </div>
-            </div>
-            
-            <div class="cards-wrapper" id="cards-wrapper-2" hidden>
-                <div class="card" id="card-0">
-                    <h3>Site Bento's Group</h3>
-                    <p>Um site de empresa de reformas residenciais</p>
-                    <a class="button" href="https://www.bentos-group.com">Ver</a>
-                </div>
-                <div class="card" id="card-1">
-                    <h3>Tone Calibrator</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                    <a class="button" href="#">Ver</a>
-                </div>
-                <div class="card" id="card-2">
-                    <h3>Project Project</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                    <a class="button" href="#">Ver</a>
-                </div>
-                <div class="card" id="card-3">
-                    <h3>Jogo de Navegador Como HaxBall (Em Desenvolvimento)</h3>
-                    <p>Um jogo de futebol 2D para navegador, parecido com HaxBall.</p>
-                    <a class="button" href="https://alessiocastro.github.io/soccer-2d">Ver</a>
-                </div>
-                <div class="card" id="card-4">
-                    <pre><code class="language-javascript">
-                        <span class="token keyword">const</span> <span class="token constant">minhaInfo</span> <span class="token operator">=</span> <span class="token punctuation">{</span>
-                            <span class="token property">nome</span><span class="token punctuation">:</span> <span class="token string">'Aléssio Castro'</span><span class="token punctuation">,</span>
-                            <span class="token property">idade</span><span class="token punctuation">:</span> <span class="token string">'22'</span><span class="token punctuation">,</span>
-                            <span class="token property">email</span><span class="token punctuation">:</span> <span class="token string">'alessiopcastro@outlook.com'</span>
-                            <span class="token property">fone</span><span class="token punctuation">:</span> <span class="token string">'+55 (62) 98428-4511'</span>
-                            <span class="token property">profissão</span><span class="token punctuation">:</span> <span class="token string">`Desenvolvedor de &nbsp;&nbsp;&nbsp;&nbsp;Software`</span>
-                        <span class="token punctuation">}</span><span class="token punctuation">;</span>
-                    </code></pre>
-                    <!-- <span class="token property">objetivo</span><span class="token punctuation">:</span> <span class="token string">'Desenvolver soluções web modernas e eficientes, com foco em JavaScript e tecnologias frontend.'</span> -->
-                    <h3>Contato</h3>
-                    <form action="mailto:alessiopcastro@outlook.com" method="post">
-                        <label for="name" class="hidden-label">Nome:</label>
-                        <input type="text" id="name" name="name" placeholder="Nome" autocomplete="name" required>
-
-                        <label for="message" class="hidden-label">Mensagem:</label>
-                        <input type="text" id="message" name="message" placeholder="Mensagem" required></input>
-
-                        <button type="submit" class="button">Enviar</button>
-                    </form>
-                </div>
-                <div class="card" id="card-5">
-                    <h3>Bot de figurinhas para Discord (Pendente)</h3>
-                    <p>Um bot que sorteia figurinhas para usuários, permite ver o álbum pessoal e trocar figurinhas com
-                        outros.</p>
-                    <p>(Esse projeto foi realizado há muito tempo, necessitando revisão)</p>
-                    <a class="button" href="#">Ver</a>
-                </div>
-                <div class="card" id="card-6">
-                    <h3>Project Paintrotasking</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                    <a class="button" href="#">Ver</a>
-                </div>
-                <div class="card" id="card-7">
-                    <h3>Project Paintrotasking</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                    <a class="button" href="#">Ver</a>
-                </div>
-            </div>
-        </div>
-    </main>
-
     <script src="../js/script.js"></script>
+
+    <script>
+        function createStars(layer, count) {
+            for (let i = 0; i < count; i++) {
+                const star = document.createElement('div');
+                star.className = 'star';
+                star.style.top = `${Math.random() * 100}vh`;
+                star.style.left = `${Math.random() * 100}vw`;
+                star.style.animationDuration = `${1 + Math.random() * 3}s`;
+                layer.appendChild(star);
+            }
+        }
+
+        createStars(document.querySelector('#layer1'), 100);
+        createStars(document.querySelector('#layer2'), 50);
+
+        for (let i = 0; i < 6; i++) {
+            const shape = document.createElement('div');
+            shape.className = 'shape';
+            shape.style.top = `${Math.random() * 80 + 10}vh`;
+            shape.style.left = `${Math.random() * 90}vw`;
+            shape.style.animationDuration = `${10 + Math.random() * 10}s`;
+            document.querySelector('#layer3').appendChild(shape);
+        }
+
+        let lastScrollX = 0;
+        let lastScrollY = 0;
+        let ticking = false;
+
+        function requestTick() {
+            if (!ticking) {
+                requestAnimationFrame(updateBackground);
+                ticking = true;
+            }
+        }
+
+        function updateBackground() {
+            ticking = false;
+
+            document.querySelector('#layer1').style.transform = `translate(${lastScrollX * 0.1}px, ${lastScrollY * 0.1}px)`;
+            document.querySelector('#layer2').style.transform = `translate(${lastScrollX * 0.3}px, ${lastScrollY * 0.3}px)`;
+            document.querySelector('#layer3').style.transform = `translate(${lastScrollX * 0.5}px, ${lastScrollY * 0.5}px)`;
+        }
+
+        const scrollWrapper = document.querySelector('.scroll-wrapper');
+
+        // Captura scroll da janela
+        window.addEventListener('scroll', () => {
+            const currentY = window.scrollY;
+            if (currentY !== lastScrollY) {
+                lastScrollY = window.scrollY;
+                requestTick();
+            }
+        });
+
+        // Captura scroll da div scroll-wrapper
+        scrollWrapper.addEventListener('scroll', () => {
+            const currentX = scrollWrapper.scrollLeft;
+            if (currentX !== lastScrollX) {
+                lastScrollX = scrollWrapper.scrollLeft;
+                requestTick();
+            }
+        });
+
+    </script>
 </body>
 
 </html>
