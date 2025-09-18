@@ -1,4 +1,8 @@
-document.addEventListener("DOMContentLoaded", () => {
+// js/script.js
+// Código comum a index.html e projects.html
+// Mantive a função normalizeCodeBlocks EXATAMENTE como você enviou.
+
+function normalizeCodeBlocks() {
     document.querySelectorAll("pre code").forEach(block => {
         let lines = block.innerHTML.split("\n");
         let indent = lines.filter(l => l.trim()).reduce((min, l) => {
@@ -7,75 +11,76 @@ document.addEventListener("DOMContentLoaded", () => {
         }, Infinity);
         block.innerHTML = lines.map(l => l.slice(indent)).join("\n");
     });
-});
+}
 
 function resizeContainer() {
     const container = document.querySelector('.cards-wrapper');
-    const cards = document.querySelectorAll('.card');
+    if (!container) return;
+
+    const cards = container.querySelectorAll('.card');
+    if (!cards.length) return;
 
     let maxBottom = 0;
     let maxRight = 0;
 
     cards.forEach(card => {
-        // Obtém a posição e o tamanho do card em relação à viewport
-        const rect = card.getBoundingClientRect();
-
-        // Calcula a posição do card em relação ao contêiner pai
-        // Isso é importante para casos de scroll
-        const cardTopInContainer = card.offsetTop;
-        const cardLeftInContainer = card.offsetLeft;
-
-        // Calcula a altura e largura total ocupada pelo card
-        const bottomPosition = cardTopInContainer + card.offsetHeight;
-        const rightPosition = cardLeftInContainer + card.offsetWidth;
-
-        // Atualiza os valores máximos
-        if (bottomPosition > maxBottom) {
-            maxBottom = bottomPosition;
-        }
-
-        if (rightPosition > maxRight) {
-            maxRight = rightPosition;
-        }
+        const bottom = card.offsetTop + card.offsetHeight;
+        const right = card.offsetLeft + card.offsetWidth;
+        maxBottom = Math.max(maxBottom, bottom);
+        maxRight = Math.max(maxRight, right);
     });
 
-    // Aplica as novas dimensões ao contêiner
-    // Adicionamos um pequeno padding para garantir espaço
-    const paddingLeft = 7;
-    const paddingBottom = 50;
-    container.style.width = `${maxRight + paddingLeft}px`;
-    container.style.height = `${maxBottom + paddingBottom}px`;
+    const PADDING_LEFT = 7;
+    const PADDING_BOTTOM = 50;
+
+    container.style.width = `${maxRight + PADDING_LEFT}px`;
+    container.style.height = `${maxBottom + PADDING_BOTTOM}px`;
 }
 
-// Executa a função após o carregamento da página
-window.addEventListener('load', resizeContainer);
-// Também pode ser útil executar quando a janela é redimensionada
-window.addEventListener('resize', resizeContainer);
+function setupModal() {
+    const modalOverlay = document.querySelector('.modal-overlay');
+    if (!modalOverlay) return;
 
-const closeButton = document.querySelector('.modal .close-button');
-const modalOverlay = document.querySelector('.modal-overlay');
+    // tenta encontrar o botão dentro do modal (compatível com ambas as marcações)
+    const closeButton = modalOverlay.querySelector('.close-button') || document.querySelector('.modal .close-button');
 
-// Verifica se o usuário já visitou o site nesta sessão
-if (!sessionStorage.getItem('hasVisited')) {
-    // Primeira visita nesta sessão
-    sessionStorage.setItem('hasVisited', 'true'); // Marca que o usuário já visitou
-    sessionStorage.setItem('modalClosed', 'false'); // Marca que o modal ainda não foi fechado
-} else {
-    // Não é a primeira visita
-    if (sessionStorage.getItem('modalClosed') === 'true') {
-        // O modal já foi fechado anteriormente, então remove-o da tela
+    const HAS_VISITED = 'hasVisited';
+    const MODAL_CLOSED = 'modalClosed';
+
+    if (!sessionStorage.getItem(HAS_VISITED)) {
+        sessionStorage.setItem(HAS_VISITED, 'true');
+        sessionStorage.setItem(MODAL_CLOSED, 'false');
+    } else if (sessionStorage.getItem(MODAL_CLOSED) === 'true') {
+        // remove overlay se já fechado nesta sessão
         modalOverlay.remove();
+        return;
     }
+
+    if (closeButton) {
+        closeButton.addEventListener('click', () => {
+            modalOverlay.remove();
+            sessionStorage.setItem(MODAL_CLOSED, 'true');
+        });
+    }
+
+    // Fecha clicando fora da caixa, se overlay existir
+    modalOverlay.addEventListener('click', (e) => {
+        if (e.target === modalOverlay) {
+            modalOverlay.remove();
+            sessionStorage.setItem(MODAL_CLOSED, 'true');
+        }
+    });
 }
 
-closeButton.addEventListener('click', () => {
-    modalOverlay.remove();
-    sessionStorage.setItem('modalClosed', 'true'); // Marca que o modal foi fechado
+// Inicialização
+document.addEventListener('DOMContentLoaded', () => {
+    // mantém a sua implementação de normalize
+    normalizeCodeBlocks();
+
+    // modal (só roda se existir)
+    setupModal();
 });
 
-// Fecha clicando fora da caixa
-/* modalOverlay.addEventListener('click', (e) => {
-    if (e.target === modalOverlay) {
-        modalOverlay.remove();
-    }
-}); */
+// resizeContainer só faz algo se existir .cards-wrapper
+window.addEventListener('load', resizeContainer);
+window.addEventListener('resize', resizeContainer);
