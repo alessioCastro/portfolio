@@ -186,7 +186,7 @@
         function doRedirect(lang) {
             clearRedirectTimeout();
             const currentHref = location.origin + location.pathname;
-            const targetHref = currentHref + '/' + lang + '/';
+            const targetHref = currentHref + lang + '/';
             if (currentHref && currentHref === targetHref) return; // já está na versão
             location.href = targetHref;
         }
