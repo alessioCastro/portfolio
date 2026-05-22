@@ -4,196 +4,193 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-    <title>Aléssio Castro Portfolio | Software Developer</title>
+    <title>Projects | Portfolio of Aléssio Castro</title>
     <meta name="description"
-        content="Aléssio Castro's portfolio, software developer. Projects in web development, apps, and games. Explore my digital solutions." />
+        content="Explore the projects of Aléssio Castro: websites, browser games, and bots developed with HTML, CSS, JavaScript, and Node.js." />
 
-    <!-- Font -->
+    <!-- SEO and hreflang -->
+    <link rel="alternate" hreflang="en" href="projects.html" />
+    <link rel="alternate" hreflang="pt" href="../pt/projects.html" />
+
+    <!-- Fonts and CSS -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet" />
-
-    <!-- CSS -->
     <link rel="stylesheet" href="../styles/reset.css" />
-    <link rel="stylesheet" href="../styles/style.css" />
+    <link rel="stylesheet" href="../styles/style.css">
+    <link rel="stylesheet" href="../styles/projects-style.css" />
     <link rel="stylesheet" href="../styles/bg.css" />
-
-    <!-- Multi-language SEO -->
-    <link rel="alternate" hreflang="en" href="index.html" />
-    <link rel="alternate" hreflang="pt-BR" href="../pt/index.html" />
-
-    <!-- Favicons -->
-    <link rel="icon" type="image/png" href="../assets/images/favicon.png" />
 </head>
 
 <body>
-    <!-- Background layers -->
-    <div class="layer stars-back" id="layer1" aria-hidden="true"></div>
-    <div class="layer stars-mid" id="layer2" aria-hidden="true"></div>
-    <div class="layer shapes" id="layer3" aria-hidden="true"></div>
-
-    <!-- Header -->
     <header>
-        <div class="logo" aria-label="Portfolio Logo">Portfolio</div>
-        <nav aria-label="Main Navigation">
+        <div class="logo">Portfolio</div>
+        <nav aria-label="Main menu">
             <ul>
-                <li><a class="nav-link active" href="#" aria-current="page">Home</a></li>
-                <li><a class="nav-link" href="projects.html">Projects</a></li>
+                <li><a class="nav-link" href="index.html">Home</a></li>
+                <li><a class="nav-link active" aria-current="page" href="#">Projects</a></li>
                 <li><a class="nav-link" href="about.html">About</a></li>
                 <li><a class="nav-link" href="contact.html">Contact</a></li>
             </ul>
         </nav>
     </header>
 
-    <!-- Accessible Modal -->
-    <dialog class="modal-overlay" role="dialog" aria-labelledby="modal-title">
+    <div class="modal-overlay" role="dialog" aria-labelledby="modal-title" aria-describedby="modal-desc">
         <div class="modal">
             <h2 id="modal-title">Attention!</h2>
-            <p>This portfolio is under development.</p>
+            <p id="modal-desc">This portfolio is currently under development.</p>
             <button class="close-button" aria-label="Close modal">Close</button>
         </div>
-    </dialog>
-
-    <!-- Content -->
-    <div class="scroll-wrapper">
-        <!-- Language selection -->
-        <div class="languages" aria-label="Language switcher">
-            <a href="#" aria-current="true">EN</a>
-            <a href="../pt/index.html" lang="pt">PT</a>
-        </div>
-
-        <main>
-            <section class="cards-wrapper" id="cards-wrapper-1" aria-label="Portfolio highlights">
-
-                <article class="card" id="card-0">
-                    <h3>Connect</h3>
-                    <p>Open to new project proposals and technical collaborations.</p>
-                    <p style="font-size: 0.85rem;"><span style="color: #4ade80;">●</span> Available for contact</p>
-                    <div style="display: flex; gap: 8px; margin-top: auto;">
-                        <a class="button" href="https://github.com/alessiocastro" target="_blank">GitHub</a>
-                        <!-- <a class="button" href="https://linkedin.com" target="_blank">LinkedIn</a> -->
-                    </div>
-                </article>
-
-                <!-- Web Development -->
-                <article class="card" id="card-1">
-                    <h3>Web Development</h3>
-                    <p>Developing websites and platforms with a focus on performance, clean structure, and good
-                        usability. The goal is to turn requirements into lightweight, functional pages.</p>
-                    <p>Check out some of my projects.</p>
-                    <a class="button" href="projects.html">View sites</a>
-                </article>
-
-                <!-- About Me -->
-                <article class="card" id="card-2">
-                    <h3>Get to Know Me</h3>
-                    <p>Hi, I'm Aléssio Castro. I'm a Software Engineering student and a hands-on programmer. I build my
-                        projects by getting into the code, testing solutions directly, and improving with every error. I
-                        always strive to deliver efficient, functional, and straightforward results.</p>
-                    <a class="button" href="about.html">Tell me more</a>
-                </article>
-
-                <article class="card" id="card-3">
-                    <h3>Tech Stack</h3>
-                    <p>Technologies I have experience with:</p>
-                    <ul style="font-size: 0.9rem; display: flex; flex-wrap: wrap; align-items: center; gap: 8px;">
-                        <li>
-                            <img src="https://www.w3.org/html/logo/badge/html5-badge-h-solo.png" width="30" height="30"
-                                alt="HTML5">
-                        </li>
-                        <li>
-                            <img src="https://upload.wikimedia.org/wikipedia/commons/9/99/Unofficial_JavaScript_logo_2.svg"
-                                alt="JavaScript" width="30px" height="30px">
-                        </li>
-                        <li>
-                            <img src="https://upload.wikimedia.org/wikipedia/commons/a/a7/React-icon.svg" alt="React"
-                                width="30px" height="30px">
-                        </li>
-                        <li>
-                            <img src="https://upload.wikimedia.org/wikipedia/commons/d/d9/Node.js_logo.svg"
-                                alt="Node.js" width="30px" height="30px">
-                        </li>
-                        <li>
-                            <img src="https://upload.wikimedia.org/wikipedia/commons/6/62/CSS3_logo.svg" alt="CSS3"
-                                width="30px" height="30px">
-                        </li>
-                        <li>
-                            <img src="https://upload.wikimedia.org/wikipedia/commons/c/c3/Python-logo-notext.svg"
-                                alt="Python" width="30px" height="30px">
-                        </li>
-                        <li>
-                            <img src="https://upload.wikimedia.org/wikipedia/commons/d/d5/Tailwind_CSS_Logo.svg"
-                                width="30" height="30" alt="Tailwind">
-                        </li>
-                    </ul>
-                    <a class="button" href="projects.html" style="margin-top: auto;">View Projects</a>
-                </article>
-
-                <!-- Contact -->
-                <article class="card" id="card-4">
-                    <pre><code class="language-javascript">
-                        <span class="token keyword">const</span> <span class="token constant">myInfo</span> <span class="token operator">=</span> <span class="token punctuation">{</span>
-                            <span class="token property">name</span><span class="token punctuation">:</span> <span class="token string">'Aléssio Castro'</span><span class="token punctuation">,</span>
-                            <span class="token property">age</span><span class="token punctuation">:</span> <span class="token number">23</span><span class="token punctuation">,</span>
-                            <span class="token property">email</span><span class="token punctuation">:</span> <span class="token string">'alessiopcastro@outlook.com'</span><span class="token punctuation">,</span>
-                            <span class="token property">phone</span><span class="token punctuation">:</span> <span class="token string">'+55 (62) 98428-4511'</span><span class="token punctuation">,</span>
-                            <span class="token property">profession</span><span class="token punctuation">:</span> <span class="token string">`Software Developer`</span>
-                        <span class="token punctuation">}</span><span class="token punctuation">;</span>
-                    </code></pre>
-
-                    <h3>Contact</h3>
-                    <form action="https://formsubmit.co/alessiopcastro@outlook.com" method="post">
-                        <input type="hidden" name="_captcha" value="false" />
-                        <input type="hidden" name="_next"
-                            value="https://alessiocastro.github.io/portfolio/en?success=true" />
-                        <input type="hidden" name="_template" value="table" />
-                        <input type="hidden" name="_subject" value="New contact from portfolio" />
-
-                        <label class="hidden-label" for="email">Email:</label>
-                        <input type="text" id="email" name="email" placeholder="Enter your email" autocomplete="email"
-                            required />
-
-                        <label class="hidden-label" for="message">Message:</label>
-                        <input id="message" name="message" placeholder="Enter your message" required></input>
-
-                        <button type="submit" class="button">Send</button>
-                    </form>
-                </article>
-
-                <article class="card" id="card-5">
-                    <h3>Education & Languages</h3>
-
-                    <p><strong>B.S. in Software Engineering</strong></p>
-                    <p style="font-size: 0.85rem; margin-bottom: 12px;">Focused on systems development, logic, and code
-                        architecture.</p>
-
-                    <p><strong>Languages:</strong></p>
-                    <p style="font-size: 0.85rem;">
-                        Portuguese (Native)<br>
-                        English (Technical / Good reading skills for documentation)
-                    </p>
-                </article>
-
-                <!-- App Development -->
-                <article class="card" id="card-6">
-                    <h3>App Development</h3>
-                    <p>Building and implementing mobile applications, focusing on creating useful tools and a
-                        straightforward user experience without visual clutter.</p>
-                    <p>Discover my apps.</p>
-                    <a class="button" href="projects.html">View apps</a>
-                </article>
-
-                <!-- Game Development -->
-                <article class="card" id="card-7">
-                    <h3>Game Development</h3>
-                    <p>Developing logic and mechanics for interactive games. I apply programming concepts to structure
-                        systems, rules, and environments efficiently.</p>
-                    <p>See what I've built.</p>
-                    <a class="button" href="#">View games</a>
-                </article>
-
-            </section>
-        </main>
     </div>
+
+    <div class="languages" aria-label="Language switcher">
+        <a href="#" aria-current="true">EN</a>
+        <a href="../pt/projects.html" lang="pt">PT</a>
+    </div>
+
+    <main>
+        <h1>Projects</h1>
+
+        <section class="projects-wrapper">
+            <article class="project-card">
+                <h2>Bento's Group Website</h2>
+                <p>A company website for home remodeling.</p>
+                <div class="programming-languages-wrapper">
+                    <img src="https://www.w3.org/html/logo/badge/html5-badge-h-solo.png" width="30" height="30"
+                        alt="HTML5" title="HTML5">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/6/62/CSS3_logo.svg" width="30" height="30"
+                        alt="CSS3" title="CSS3">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/9/99/Unofficial_JavaScript_logo_2.svg"
+                        width="30" height="30" alt="JavaScript" title="JavaScript">
+                </div>
+                <a class="button" href="https://www.bentos-group.com" target="_blank" rel="noopener">View project</a>
+            </article>
+
+            <article class="project-card">
+                <h2>C5C Construction Website</h2>
+                <p>An institutional website for a construction company.</p>
+                <div class="programming-languages-wrapper">
+                    <img src="https://www.w3.org/html/logo/badge/html5-badge-h-solo.png" width="30" height="30"
+                        alt="HTML5" title="HTML5">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/6/62/CSS3_logo.svg" width="30" height="30"
+                        alt="CSS3" title="CSS3">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/d/d5/Tailwind_CSS_Logo.svg" width="30"
+                        height="30" alt="Tailwind" title="Tailwind">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/9/99/Unofficial_JavaScript_logo_2.svg"
+                        width="30" height="30" alt="JavaScript" title="JavaScript">
+                </div>
+                <a class="button" href="#" aria-disabled="true">Coming soon</a>
+            </article>
+
+            <article class="project-card">
+                <h2>HR Construction Website</h2>
+                <p>An institutional website for a luxury home remodeling company.</p>
+                <div class="programming-languages-wrapper">
+                    <img src="https://www.w3.org/html/logo/badge/html5-badge-h-solo.png" width="30" height="30"
+                        alt="HTML5" title="HTML5">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/6/62/CSS3_logo.svg" width="30" height="30"
+                        alt="CSS3" title="CSS3">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/9/99/Unofficial_JavaScript_logo_2.svg"
+                        width="30" height="30" alt="JavaScript" title="JavaScript">
+                </div>
+                <a class="button" href="https://alessiocastro.github.io/home-remodeling-website" target="_blank"
+                    rel="noopener">View project</a>
+            </article>
+
+            <article class="project-card">
+                <h2>Parish Website</h2>
+                <p>A website for the Immaculate Heart of Mary Parish of the Diocese of Anápolis.</p>
+                <div class="programming-languages-wrapper">
+                    <img src="https://www.w3.org/html/logo/badge/html5-badge-h-solo.png" width="30" height="30"
+                        alt="HTML5" title="HTML5">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/6/62/CSS3_logo.svg" width="30" height="30"
+                        alt="CSS3" title="CSS3">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/9/99/Unofficial_JavaScript_logo_2.svg"
+                        width="30" height="30" alt="JavaScript" title="JavaScript">
+                </div>
+                <a class="button" href="#" aria-disabled="true">Coming soon</a>
+            </article>
+
+            <article class="project-card">
+                <h2>Interactive iPhone 16 Pro Max</h2>
+                <p>An iPhone 16 Pro Max designed on a web page with JavaScript interactivity, simulating a real iPhone
+                    16 Pro Max and its operating system.</p>
+                <div class="programming-languages-wrapper">
+                    <img src="https://www.w3.org/html/logo/badge/html5-badge-h-solo.png" width="30" height="30"
+                        alt="HTML5" title="HTML5">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/6/62/CSS3_logo.svg" width="30" height="30"
+                        alt="CSS3" title="CSS3">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/9/99/Unofficial_JavaScript_logo_2.svg"
+                        width="30" height="30" alt="JavaScript" title="JavaScript">
+                </div>
+                <a class="button" href="https://alessiocastro.github.io/ios-simulator" target="_blank"
+                    rel="noopener">View project</a>
+            </article>
+
+            <article class="project-card">
+                <h2>Browser Game (in development)</h2>
+                <p>A 2D soccer browser game, inspired by HaxBall.</p>
+                <div class="programming-languages-wrapper">
+                    <img src="https://www.w3.org/html/logo/badge/html5-badge-h-solo.png" width="30" height="30"
+                        alt="HTML5" title="HTML5">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/6/62/CSS3_logo.svg" width="30" height="30"
+                        alt="CSS3" title="CSS3">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/9/99/Unofficial_JavaScript_logo_2.svg"
+                        width="30" height="30" alt="JavaScript" title="JavaScript">
+                </div>
+                <a class="button" href="https://alessiocastro.github.io/soccer-2d" target="_blank" rel="noopener">View
+                    project</a>
+            </article>
+
+            <article class="project-card">
+                <h2>Sticker Bot for Discord (pending)</h2>
+                <p>A bot that allows users to collect stickers, view their personal album, and trade with others.</p>
+                <p><em>This project was created a long time ago and needs a review.</em></p>
+                <div class="programming-languages-wrapper">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/9/99/Unofficial_JavaScript_logo_2.svg"
+                        width="30" height="30" alt="JavaScript" title="JavaScript">
+                    <img src="https://www.vectorlogo.zone/logos/nodejs/nodejs-icon.svg" width="30" height="30"
+                        alt="Node.js" title="Node.js">
+                </div>
+                <a class="button" href="#" aria-disabled="true">Unavailable</a>
+            </article>
+
+            <article class="project-card">
+                <h2>Duplicate Image Filter Website</h2>
+                <p>A tool to identify duplicate images.</p>
+                <div class="programming-languages-wrapper">
+                    <img src="https://www.w3.org/html/logo/badge/html5-badge-h-solo.png" width="30" height="30"
+                        alt="HTML5" title="HTML5">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/6/62/CSS3_logo.svg" width="30" height="30"
+                        alt="CSS3" title="CSS3">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/9/99/Unofficial_JavaScript_logo_2.svg"
+                        width="30" height="30" alt="JavaScript" title="JavaScript">
+                </div>
+                <a class="button" href="https://alessiocastro.github.io/duplicate-image-filter-website" target="_blank"
+                    rel="noopener">View project</a>
+            </article>
+
+            <article class="project-card">
+                <h2>Chat SPA with React Vanilla (in development)</h2>
+                <p>A Single Page Application (SPA) chat built using "React Vanilla" — no frameworks, just clean code,
+                    rendering logic, dynamic style and script handling, routing, and componentization… and ironically,
+                    still no reactivity.</p>
+                <div class="programming-languages-wrapper">
+                    <img src="https://www.w3.org/html/logo/badge/html5-badge-h-solo.png" width="30" height="30"
+                        alt="HTML5" title="HTML5">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/6/62/CSS3_logo.svg" width="30" height="30"
+                        alt="CSS3" title="CSS3">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/9/99/Unofficial_JavaScript_logo_2.svg"
+                        width="30" height="30" alt="JavaScript" title="JavaScript">
+                </div>
+                <a class="button" href="https://alessiocastro.github.io/react-vanilla-spa" target="_blank"
+                    rel="noopener">Ver projeto</a>
+            </article>
+        </section>
+    </main>
+
+    <!-- Background layers -->
+    <div class="layer stars-back" id="layer1"></div>
+    <div class="layer stars-mid" id="layer2"></div>
+    <div class="layer shapes" id="layer3"></div>
 
     <!-- Scripts -->
     <script src="../src/scripts/main.js" defer></script>
