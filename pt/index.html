@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-br">
 
 <head>
     <meta charset="UTF-8" />
@@ -13,9 +13,9 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet" />
 
     <!-- CSS -->
-    <link rel="stylesheet" href="../css/reset.css" />
-    <link rel="stylesheet" href="../css/style.css" />
-    <link rel="stylesheet" href="../css/bg.css" />
+    <link rel="stylesheet" href="../styles/reset.css" />
+    <link rel="stylesheet" href="../styles/style.css" />
+    <link rel="stylesheet" href="../styles/bg.css" />
 
     <!-- SEO multi-idioma -->
     <link rel="alternate" hreflang="pt-BR" href="index.html" />
@@ -64,18 +64,21 @@
         <main>
             <section class="cards-wrapper" id="cards-wrapper-1" aria-label="Destaques do portfólio">
 
-                <!-- Card exemplo vazio -->
                 <article class="card" id="card-0">
-                    <h3>Bloco vazio</h3>
-                    <p>(Pensando o que colocar)</p>
-                    <a class="button" href="#" aria-disabled="true">Em breve</a>
+                    <h3>Conecte-se</h3>
+                    <p>Aberto a novas propostas de projetos e colaborações técnicas.</p>
+                    <p style="font-size: 0.85rem;"><span style="color: #4ade80;">●</span> Disponível para contato</p>
+                    <div style="display: flex; gap: 8px; margin-top: auto;">
+                        <a class="button" href="https://github.com/alessiocastro" target="_blank">GitHub</a>
+                        <!-- <a class="button" href="https://linkedin.com" target="_blank">LinkedIn</a> -->
+                    </div>
                 </article>
 
                 <!-- Desenvolvimento Web -->
                 <article class="card" id="card-1">
                     <h3>Desenvolvimento Web</h3>
-                    <p>Crio sites e plataformas que funcionam de verdade. Meu foco é na construção de soluções digitais
-                        eficientes e intuitivas, do design à funcionalidade.</p>
+                    <p>Desenvolvimento de sites e plataformas focando em desempenho, estrutura limpa e boa usabilidade.
+                        O objetivo é transformar requisitos em páginas leves e funcionais.</p>
                     <p>Veja alguns dos meus projetos.</p>
                     <a class="button" href="projects.html">Ver sites</a>
                 </article>
@@ -83,19 +86,47 @@
                 <!-- Sobre mim -->
                 <article class="card" id="card-2">
                     <h3>Conheça-me Melhor</h3>
-                    <p>Prazer, sou Aléssio Castro. Aos 22 anos, eu poderia ter seguido a cartilha, mas preferi me jogar
-                        de cabeça no código, como uma inteligência artificial que aprende com a iteratividade e a
-                        repetição. Não tenho medo de errar, pois sei que a prática contínua me leva à excelência. Minha
-                        jornada é uma prova de que a prática é a melhor teoria. Estou pronto para mostrar o que essa
-                        mentalidade pode construir.</p>
+                    <p>Prazer, sou Aléssio Castro. Sou estudante de Engenharia de Software e programador focado na
+                        prática. Construo meus projetos colocando a mão na massa, testando soluções direto no código e
+                        evoluindo a cada erro. Busco sempre entregar resultados eficientes, funcionais e sem
+                        complicações.</p>
                     <a class="button" href="about.html">Conte-me mais</a>
                 </article>
 
-                <!-- Card vazio -->
                 <article class="card" id="card-3">
-                    <h3>Bloco vazio</h3>
-                    <p>(Pensando o que colocar)</p>
-                    <a class="button" href="#" aria-disabled="true">Em breve</a>
+                    <h3>Stack de Tech</h3>
+                    <p>Tecnologias com as quais tenho experiência:</p>
+                    <ul style="font-size: 0.9rem; display: flex; flex-wrap: wrap; align-items: center; gap: 8px;">
+                        <li>
+                            <img src="https://www.w3.org/html/logo/badge/html5-badge-h-solo.png" width="30" height="30"
+                                alt="HTML5">
+                        </li>
+                        <li>
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/9/99/Unofficial_JavaScript_logo_2.svg"
+                                alt="JavaScript" width="30px" height="30px">
+                        </li>
+                        <li>
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/a/a7/React-icon.svg" alt="React"
+                                width="30px" height="30px">
+                        </li>
+                        <li>
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/d/d9/Node.js_logo.svg"
+                                alt="Node.js" width="30px" height="30px">
+                        </li>
+                        <li>
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/6/62/CSS3_logo.svg" alt="CSS3"
+                                width="30px" height="30px">
+                        </li>
+                        <li>
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/c/c3/Python-logo-notext.svg"
+                                alt="Python" width="30px" height="30px">
+                        </li>
+                        <li>
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/d/d5/Tailwind_CSS_Logo.svg"
+                                width="30" height="30" alt="Tailwind">
+                        </li>
+                    </ul>
+                    <a class="button" href="projects.html" style="margin-top: auto;">Ver Projetos</a>
                 </article>
 
                 <!-- Contato -->
@@ -103,7 +134,7 @@
                     <pre><code class="language-javascript">
                         <span class="token keyword">const</span> <span class="token constant">minhaInfo</span> <span class="token operator">=</span> <span class="token punctuation">{</span>
                             <span class="token property">nome</span><span class="token punctuation">:</span> <span class="token string">'Aléssio Castro'</span><span class="token punctuation">,</span>
-                            <span class="token property">idade</span><span class="token punctuation">:</span> <span class="token number">22</span><span class="token punctuation">,</span>
+                            <span class="token property">idade</span><span class="token punctuation">:</span> <span class="token number">23</span><span class="token punctuation">,</span>
                             <span class="token property">email</span><span class="token punctuation">:</span> <span class="token string">'alessiopcastro@outlook.com'</span><span class="token punctuation">,</span>
                             <span class="token property">fone</span><span class="token punctuation">:</span> <span class="token string">'+55 (62) 98428-4511'</span><span class="token punctuation">,</span>
                             <span class="token property">profissão</span><span class="token punctuation">:</span> <span class="token string">`Desenvolvedor de &nbsp;&nbsp;&nbsp;&nbsp;Software`</span>
@@ -114,12 +145,14 @@
                     <h3>Contato</h3>
                     <form action="https://formsubmit.co/alessiopcastro@outlook.com" method="post">
                         <input type="hidden" name="_captcha" value="false" />
-                        <input type="hidden" name="_next" value="https://alessiocastro.github.io/portfolio/pt?success=true" />
+                        <input type="hidden" name="_next"
+                            value="https://alessiocastro.github.io/portfolio/pt?success=true" />
                         <input type="hidden" name="_template" value="table" />
                         <input type="hidden" name="_subject" value="Novo contato do portfólio" />
 
                         <label class="hidden-label" for="email">Email:</label>
-                        <input type="text" id="email" name="email" placeholder="Digite seu email" autocomplete="email" required />
+                        <input type="text" id="email" name="email" placeholder="Digite seu email" autocomplete="email"
+                            required />
 
                         <label class="hidden-label" for="message">Mensagem:</label>
                         <input id="message" name="message" placeholder="Digite sua mensagem" required></input>
@@ -128,18 +161,25 @@
                     </form>
                 </article>
 
-                <!-- Card vazio -->
                 <article class="card" id="card-5">
-                    <h3>Bloco vazio</h3>
-                    <p>(Pensando o que colocar)</p>
-                    <a class="button" href="#" aria-disabled="true">Em breve</a>
+                    <h3>Educação & Idiomas</h3>
+
+                    <p><strong>Bacharelado em Engenharia de Software</strong></p>
+                    <p style="font-size: 0.85rem; margin-bottom: 12px;">Foco em desenvolvimento de sistemas, lógica e
+                        arquitetura de código.</p>
+
+                    <p><strong>Idiomas:</strong></p>
+                    <p style="font-size: 0.85rem;">
+                        Português (Nativo)<br>
+                        Inglês (Técnico / Boa leitura para documentação)
+                    </p>
                 </article>
 
                 <!-- Desenvolvimento de Apps -->
                 <article class="card" id="card-6">
                     <h3>Desenvolvimento de Apps</h3>
-                    <p>Transformo ideias em aplicativos para celulares. Me dedico a construir produtos que sejam não só
-                        funcionais, mas também agradáveis de usar.</p>
+                    <p>Criação e implementação de aplicativos mobile, com foco no desenvolvimento de ferramentas úteis e
+                        em uma experiência de uso direta, sem poluição visual.</p>
                     <p>Conheça meus aplicativos.</p>
                     <a class="button" href="projects.html">Ver apps</a>
                 </article>
@@ -147,9 +187,9 @@
                 <!-- Desenvolvimento de Jogos -->
                 <article class="card" id="card-7">
                     <h3>Desenvolvimento de Jogos</h3>
-                    <p>Crio jogos que combinam lógica, design e diversão. Minha paixão é construir mundos interativos e
-                        desafiadores, aplicando meus conhecimentos de programação para dar vida a cada ideia.</p>
-                    <p>Veja o que eu já construí e explore a minha criatividade.</p>
+                    <p>Desenvolvimento de lógica e mecânicas para jogos interativos. Aplico conceitos de programação
+                        para estruturar sistemas, regras e ambientes de forma otimizada.</p>
+                    <p>Veja o que eu já construí.</p>
                     <a class="button" href="#">Ver jogos</a>
                 </article>
 
@@ -158,8 +198,8 @@
     </div>
 
     <!-- Scripts -->
-    <script src="../js/script.js" defer></script>
-    <script src="../js/bg.js" defer></script>
+    <script src="../src/scripts/main.js" defer></script>
+    <script src="../src/scripts/bg.js" defer></script>
 </body>
 
 </html>
