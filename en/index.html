@@ -13,9 +13,9 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet" />
 
     <!-- CSS -->
-    <link rel="stylesheet" href="../css/reset.css" />
-    <link rel="stylesheet" href="../css/style.css" />
-    <link rel="stylesheet" href="../css/bg.css" />
+    <link rel="stylesheet" href="../styles/reset.css" />
+    <link rel="stylesheet" href="../styles/style.css" />
+    <link rel="stylesheet" href="../styles/bg.css" />
 
     <!-- Multi-language SEO -->
     <link rel="alternate" hreflang="en" href="index.html" />
@@ -64,38 +64,68 @@
         <main>
             <section class="cards-wrapper" id="cards-wrapper-1" aria-label="Portfolio highlights">
 
-                <!-- Empty card -->
                 <article class="card" id="card-0">
-                    <h3>Empty Block</h3>
-                    <p>(Thinking about what to put)</p>
-                    <a class="button" href="#" aria-disabled="true">Coming Soon</a>
+                    <h3>Connect</h3>
+                    <p>Open to new project proposals and technical collaborations.</p>
+                    <p style="font-size: 0.85rem;"><span style="color: #4ade80;">●</span> Available for contact</p>
+                    <div style="display: flex; gap: 8px; margin-top: auto;">
+                        <a class="button" href="https://github.com/alessiocastro" target="_blank">GitHub</a>
+                        <!-- <a class="button" href="https://linkedin.com" target="_blank">LinkedIn</a> -->
+                    </div>
                 </article>
 
                 <!-- Web Development -->
                 <article class="card" id="card-1">
                     <h3>Web Development</h3>
-                    <p>I create websites and platforms that actually work. My focus is on building efficient and
-                        intuitive digital solutions, from design to functionality.</p>
-                    <p>See some of my projects.</p>
-                    <a class="button" href="projects.html">See websites</a>
+                    <p>Developing websites and platforms with a focus on performance, clean structure, and good
+                        usability. The goal is to turn requirements into lightweight, functional pages.</p>
+                    <p>Check out some of my projects.</p>
+                    <a class="button" href="projects.html">View sites</a>
                 </article>
 
                 <!-- About Me -->
                 <article class="card" id="card-2">
-                    <h3>Get to Know Me Better</h3>
-                    <p>Hello, I'm Aléssio Castro. At 22 years old, I could have followed the usual path, but I chose to
-                        dive headfirst into coding, like an artificial intelligence learning through iteration and
-                        repetition. I'm not afraid to make mistakes because I know that continuous practice leads to
-                        excellence. My journey is proof that action is the best theory. I'm ready to show what this
-                        mindset can create.</p>
+                    <h3>Get to Know Me</h3>
+                    <p>Hi, I'm Aléssio Castro. I'm a Software Engineering student and a hands-on programmer. I build my
+                        projects by getting into the code, testing solutions directly, and improving with every error. I
+                        always strive to deliver efficient, functional, and straightforward results.</p>
                     <a class="button" href="about.html">Tell me more</a>
                 </article>
 
-                <!-- Empty card -->
                 <article class="card" id="card-3">
-                    <h3>Empty Block</h3>
-                    <p>(Thinking about what to put)</p>
-                    <a class="button" href="#" aria-disabled="true">Coming Soon</a>
+                    <h3>Tech Stack</h3>
+                    <p>Technologies I have experience with:</p>
+                    <ul style="font-size: 0.9rem; display: flex; flex-wrap: wrap; align-items: center; gap: 8px;">
+                        <li>
+                            <img src="https://www.w3.org/html/logo/badge/html5-badge-h-solo.png" width="30" height="30"
+                                alt="HTML5">
+                        </li>
+                        <li>
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/9/99/Unofficial_JavaScript_logo_2.svg"
+                                alt="JavaScript" width="30px" height="30px">
+                        </li>
+                        <li>
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/a/a7/React-icon.svg" alt="React"
+                                width="30px" height="30px">
+                        </li>
+                        <li>
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/d/d9/Node.js_logo.svg"
+                                alt="Node.js" width="30px" height="30px">
+                        </li>
+                        <li>
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/6/62/CSS3_logo.svg" alt="CSS3"
+                                width="30px" height="30px">
+                        </li>
+                        <li>
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/c/c3/Python-logo-notext.svg"
+                                alt="Python" width="30px" height="30px">
+                        </li>
+                        <li>
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/d/d5/Tailwind_CSS_Logo.svg"
+                                width="30" height="30" alt="Tailwind">
+                        </li>
+                    </ul>
+                    <a class="button" href="projects.html" style="margin-top: auto;">View Projects</a>
                 </article>
 
                 <!-- Contact -->
@@ -103,7 +133,7 @@
                     <pre><code class="language-javascript">
                         <span class="token keyword">const</span> <span class="token constant">myInfo</span> <span class="token operator">=</span> <span class="token punctuation">{</span>
                             <span class="token property">name</span><span class="token punctuation">:</span> <span class="token string">'Aléssio Castro'</span><span class="token punctuation">,</span>
-                            <span class="token property">age</span><span class="token punctuation">:</span> <span class="token number">22</span><span class="token punctuation">,</span>
+                            <span class="token property">age</span><span class="token punctuation">:</span> <span class="token number">23</span><span class="token punctuation">,</span>
                             <span class="token property">email</span><span class="token punctuation">:</span> <span class="token string">'alessiopcastro@outlook.com'</span><span class="token punctuation">,</span>
                             <span class="token property">phone</span><span class="token punctuation">:</span> <span class="token string">'+55 (62) 98428-4511'</span><span class="token punctuation">,</span>
                             <span class="token property">profession</span><span class="token punctuation">:</span> <span class="token string">`Software Developer`</span>
@@ -113,12 +143,14 @@
                     <h3>Contact</h3>
                     <form action="https://formsubmit.co/alessiopcastro@outlook.com" method="post">
                         <input type="hidden" name="_captcha" value="false" />
-                        <input type="hidden" name="_next" value="https://alessiocastro.github.io/portfolio/en?success=true" />
+                        <input type="hidden" name="_next"
+                            value="https://alessiocastro.github.io/portfolio/en?success=true" />
                         <input type="hidden" name="_template" value="table" />
                         <input type="hidden" name="_subject" value="New contact from portfolio" />
 
                         <label class="hidden-label" for="email">Email:</label>
-                        <input type="text" id="email" name="email" placeholder="Enter your email" autocomplete="email" required />
+                        <input type="text" id="email" name="email" placeholder="Enter your email" autocomplete="email"
+                            required />
 
                         <label class="hidden-label" for="message">Message:</label>
                         <input id="message" name="message" placeholder="Enter your message" required></input>
@@ -127,29 +159,36 @@
                     </form>
                 </article>
 
-                <!-- Empty card -->
                 <article class="card" id="card-5">
-                    <h3>Empty Block</h3>
-                    <p>(Thinking about what to put)</p>
-                    <a class="button" href="#" aria-disabled="true">Coming Soon</a>
+                    <h3>Education & Languages</h3>
+
+                    <p><strong>B.S. in Software Engineering</strong></p>
+                    <p style="font-size: 0.85rem; margin-bottom: 12px;">Focused on systems development, logic, and code
+                        architecture.</p>
+
+                    <p><strong>Languages:</strong></p>
+                    <p style="font-size: 0.85rem;">
+                        Portuguese (Native)<br>
+                        English (Technical / Good reading skills for documentation)
+                    </p>
                 </article>
 
                 <!-- App Development -->
                 <article class="card" id="card-6">
                     <h3>App Development</h3>
-                    <p>I turn ideas into mobile applications. I dedicate myself to building products that are not only
-                        functional but also enjoyable to use.</p>
-                    <p>Get to know my apps.</p>
+                    <p>Building and implementing mobile applications, focusing on creating useful tools and a
+                        straightforward user experience without visual clutter.</p>
+                    <p>Discover my apps.</p>
                     <a class="button" href="projects.html">View apps</a>
                 </article>
 
                 <!-- Game Development -->
                 <article class="card" id="card-7">
                     <h3>Game Development</h3>
-                    <p>I create games that combine logic, design, and fun. My passion is building interactive and
-                        challenging worlds, applying my programming knowledge to bring each idea to life.</p>
-                    <p>See what I've built and explore my creativity.</p>
-                    <a class="button" href="#">See games</a>
+                    <p>Developing logic and mechanics for interactive games. I apply programming concepts to structure
+                        systems, rules, and environments efficiently.</p>
+                    <p>See what I've built.</p>
+                    <a class="button" href="#">View games</a>
                 </article>
 
             </section>
@@ -157,8 +196,8 @@
     </div>
 
     <!-- Scripts -->
-    <script src="../js/script.js" defer></script>
-    <script src="../js/bg.js" defer></script>
+    <script src="../src/scripts/main.js" defer></script>
+    <script src="../src/scripts/bg.js" defer></script>
 </body>
 
 </html>
